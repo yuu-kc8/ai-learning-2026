@@ -1,6 +1,11 @@
 function showPlan() {
   const food = document.getElementById("foodInput").value;
   const result = document.getElementById("result");
+  
+  if (food === "") {
+  result.innerHTML = "<p>食材を入力してください。</p>";
+  return;
+}
 
   result.innerHTML = `
     <h2>今日の買い物プラン</h2>
