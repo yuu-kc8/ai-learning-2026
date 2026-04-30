@@ -21,10 +21,13 @@ button {
 
 #result {
   margin-top: 20px;
-  padding: 16px;
+  padding: 32px;
+  line-height: 1.8;
   background-color: white;
   border: 2px solid #ccc;
+  border-radius: 12px;
 }
+
 #result ul {
   margin-top: 8px;
   padding-left: 28px;
@@ -33,11 +36,7 @@ button {
 #result li {
   margin-bottom: 6px;
 }
-#result {
-  background-color: white;
-  border-radius: 12px;
-  padding: 32px;
-}
+
 #result h3 {
   margin-top: 24px;
   margin-bottom: 8px;
