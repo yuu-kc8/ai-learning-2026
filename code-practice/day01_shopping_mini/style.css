@@ -33,3 +33,7 @@ button {
 #result li {
   margin-bottom: 6px;
 }
+#result {
+  background-color: white;
+  border-radius: 12px;
+}
