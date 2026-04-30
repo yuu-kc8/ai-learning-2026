@@ -46,3 +46,11 @@ button {
 #result p {
   line-height: 1.6;
 }
+#foodInput {
+  vertical-align: middle;
+}
+
+button {
+  vertical-align: middle;
+  margin-left: 8px;
+}
