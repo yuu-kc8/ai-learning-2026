@@ -38,3 +38,11 @@ button {
   border-radius: 12px;
   padding: 32px;
 }
+#result h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+#result p {
+  line-height: 1.6;
+}
