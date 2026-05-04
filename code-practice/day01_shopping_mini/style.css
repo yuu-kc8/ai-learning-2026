@@ -58,4 +58,7 @@ button {
 }
 .note {
   font-weight: bold;
+  background-color: #fff3cd;
+  padding: 12px;
+  border-radius: 8px;
 }
