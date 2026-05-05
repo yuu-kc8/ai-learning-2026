@@ -67,3 +67,10 @@ button {
   border-radius: 8px;
   margin-bottom: 24px;
 }
+#result h2 {
+  margin-bottom: 20px;
+}
+
+#result h3 {
+  margin-top: 28px;
+}
