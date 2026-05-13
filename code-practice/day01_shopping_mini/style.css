@@ -21,6 +21,7 @@ button {
   vertical-align: middle;
   font-weight: bold;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 #result {
