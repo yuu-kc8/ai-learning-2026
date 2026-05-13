@@ -10,7 +10,7 @@ function showPlan() {
   result.innerHTML = `
     <h2>今日の買い物プラン</h2>
     <p>家にあるもの：${food}</p>
-    <h3>買い足すもの候補</h3>
+    <h3>買い足すもの候補（足りないもの）</h3>
 <ul>
   <li>卵</li>
   <li>野菜</li>
