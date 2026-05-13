@@ -28,8 +28,8 @@ button {
   margin-top: 20px;
   padding: 32px;
   line-height: 1.8;
-  background-color: white;
-  border: 2px solid #ccc;
+  background-color: #fffdf5;
+  border: 2px solid #e8d9a8;
   border-radius: 12px;
   max-width: 900px;
   box-sizing: border-box;
