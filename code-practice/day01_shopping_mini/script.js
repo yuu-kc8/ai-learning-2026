@@ -17,7 +17,7 @@ function showPlan() {
   <li>味噌汁</li>
 </ul>
     <p>今日は、家にある食材を先に使うプランです。</p>
-    <p><strong>おすすめ：</strong>家にある食材を先に使い、足りないものだけ買い足しましょう。</p>
+    <p><strong>おすすめ：</strong>家にあるものを優先して使いましょう。</p>
 <p class="memo"><strong>買い物メモ：</strong>必要なものだけ買い足しましょう。</p>
 <p class="note">注意：買い物前に在庫を確認しましょう。</p>
 
