@@ -3,7 +3,7 @@ function showPlan() {
   const result = document.getElementById("result");
   
   if (food.trim() === "") {
-  result.innerHTML = "<p>食材を入力してください。</p>";
+  result.innerHTML = `<p>先に使う食材を入力してください。</p>`;
   return;
 }
 
