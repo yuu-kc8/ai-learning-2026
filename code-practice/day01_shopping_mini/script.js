@@ -9,7 +9,7 @@ function showPlan() {
 
   result.innerHTML = `
     <h2>今日の買い物プラン</h2>
-    <p>家にあるもの：${food}</p>
+    <p>先に使う食材：${food}</p>
     <h3>買い足すもの候補（家にないものだけ）</h3>
 <ul>
   <li>卵 1パック</li>
