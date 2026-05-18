@@ -21,6 +21,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   display: block;
+  width: 260px;
 }
 
 #result {
