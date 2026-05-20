@@ -106,3 +106,9 @@ button:hover {
   margin-top: 6px;
    margin-bottom: 18px;
 }
+.day-card {
+  background-color: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
