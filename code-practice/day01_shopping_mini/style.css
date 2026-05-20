@@ -144,14 +144,7 @@ button:hover {
 .main-item {
   font-weight: bold;
 }
-.shopping-desc {
-  color: #64748b;
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.menu-section-desc {
+.small-desc {
   color: #64748b;
   margin-top: 0;
   margin-bottom: 12px;
