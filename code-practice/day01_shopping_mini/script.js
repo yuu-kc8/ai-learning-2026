@@ -11,9 +11,10 @@ function showPlan() {
   <h2>3日分の買い物プラン</h2>
 
 <div class="shopping-card">
-  <p class="section-title">買い物リスト</p>
+ <p class="section-title">買い物リスト</p>
+<p class="shopping-desc">家にないものだけ買い足しましょう。</p>
 
-  <ul>
+<ul>
     <li class="main-item">先に使う食材：${food}</li>
     <li>卵 1パック</li>
     <li>カット野菜 1袋</li>
