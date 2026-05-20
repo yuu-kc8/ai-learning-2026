@@ -14,7 +14,7 @@ function showPlan() {
   <p class="section-title">買い物リスト</p>
 
   <ul>
-    <li>${food}</li>
+    <li class="main-item">${food}</li>
     <li>卵 1パック</li>
     <li>カット野菜 1袋</li>
     <li>味噌汁の具材</li>
