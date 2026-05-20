@@ -112,6 +112,7 @@ button:hover {
   border-radius: 10px;
   margin-bottom: 16px;
   border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 .day-card h3 {
   margin-top: 0;
