@@ -120,3 +120,8 @@ button:hover {
   margin-top: 0;
   margin-bottom: 10px;
 }
+.section-title {
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
