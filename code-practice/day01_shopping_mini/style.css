@@ -144,3 +144,9 @@ button:hover {
 .main-item {
   font-weight: bold;
 }
+.shopping-desc {
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
