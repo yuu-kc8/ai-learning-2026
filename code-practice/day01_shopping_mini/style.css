@@ -151,3 +151,10 @@ button:hover {
   font-size: 14px;
   line-height: 1.5;
 }
+.info-card {
+  background-color: #f9fafb;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #e5e7eb;
+}
