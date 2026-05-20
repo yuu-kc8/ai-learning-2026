@@ -96,6 +96,7 @@ button:hover {
   display: none;
 }
 .menu-title {
+  background-color: #fef3c7;
   padding: 8px;
   border-radius: 6px;
   font-weight: bold;
