@@ -95,3 +95,9 @@ button:hover {
 #result:empty {
   display: none;
 }
+.menu-title {
+  background-color: #fff3cd;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
