@@ -141,3 +141,6 @@ button:hover {
   margin-bottom: 0;
   padding-left: 22px;
 }
+.main-item {
+  font-weight: bold;
+}
