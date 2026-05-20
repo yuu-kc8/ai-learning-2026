@@ -125,3 +125,10 @@ button:hover {
   margin-top: 16px;
   margin-bottom: 8px;
 }
+.shopping-card {
+  background-color: #f0f9ff;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #bae6fd;
+}

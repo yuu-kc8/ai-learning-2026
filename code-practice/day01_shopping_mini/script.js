@@ -10,7 +10,8 @@ function showPlan() {
   result.innerHTML = `
   <h2>3日分の買い物プラン</h2>
 
-<p class="section-title">買い物リスト</p>
+<div class="shopping-card">
+  <p class="section-title">買い物リスト</p>
 
   <ul>
     <li>${food}</li>
@@ -18,6 +19,7 @@ function showPlan() {
     <li>カット野菜 1袋</li>
     <li>味噌汁の具材</li>
   </ul>
+</div>
 
   <p>今日は、家にある食材を先に使うプランです。</p>
 
