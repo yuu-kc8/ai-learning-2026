@@ -23,14 +23,14 @@ function showPlan() {
 
     <h3>1日目</h3>
 <p class="menu-title"><strong>献立：</strong>${food}を使ったメインおかず</p>
-<p>${food}を中心に献立を作る日</p>
+<p class="menu-desc">${food}を中心に献立を作る日</p>
 
 <h3>2日目</h3>
 <p class="menu-title"><strong>献立：</strong>卵とカット野菜の炒めもの</p>
-<p>卵・カット野菜・味噌汁の具材を使って作る日</p>
+<p class="menu-desc">卵・カット野菜・味噌汁の具材を使って作る日</p>
 
 <h3>3日目</h3>
 <p class="menu-title"><strong>献立：</strong>${food}と味噌汁の具材で使い切りメニュー</p>
-<p>${food}と買い足した食材を使い切る日</p>
+<p class="menu-desc">${food}と買い足した食材を使い切る日</p>
   `;
 }

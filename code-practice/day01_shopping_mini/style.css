@@ -101,3 +101,7 @@ button:hover {
   border-radius: 6px;
   font-weight: bold;
 }
+.menu-desc {
+  color: #555;
+  margin-top: 6px;
+}
