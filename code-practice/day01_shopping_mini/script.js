@@ -28,8 +28,10 @@ function showPlan() {
   <p class="memo"><strong>買い物メモ：</strong>候補を見て、家にないものだけ買いましょう。</p>
   <p class="note"><strong>注意：</strong>買う前に、家に残っているものを確認しましょう。</p>
 
-  <div class="day-card">
-    <h3>1日目</h3>
+ <p class="section-title">3日分の献立</p>
+
+<div class="day-card">
+  <h3>1日目</h3>
     <p class="menu-title">献立：${food}を使ったメインおかず</p>
     <p class="menu-desc">${food}を中心に献立を作る日</p>
   </div>
