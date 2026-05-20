@@ -10,6 +10,8 @@ function showPlan() {
   result.innerHTML = `
   <h2>3日分の買い物プラン</h2>
 
+<p class="section-title">買い物リスト</p>
+
   <ul>
     <li>${food}</li>
     <li>卵 1パック</li>
