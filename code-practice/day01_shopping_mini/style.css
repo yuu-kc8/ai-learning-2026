@@ -133,3 +133,6 @@ button:hover {
   border: 1px solid #bae6fd;
   border-left: 5px solid #2563eb;
 }
+.shopping-card li {
+  margin-bottom: 6px;
+}
