@@ -12,7 +12,7 @@ function showPlan() {
 
 <div class="shopping-card">
  <p class="section-title">買い物リスト</p>
-<p class="shopping-desc">家にないものだけ買い足しましょう。</p>
+<p class="small-desc">家にないものだけ買い足しましょう。</p>
 
 <ul>
     <li class="main-item">先に使う食材：${food}</li>
@@ -29,7 +29,7 @@ function showPlan() {
   <p class="note"><strong>注意：</strong>買う前に、家に残っているものを確認しましょう。</p>
 
 <p class="section-title">3日分の献立</p>
-<p class="menu-section-desc">先に使う食材を中心に、3日分の献立を考えます。</p>
+<p class="small-desc">先に使う食材を中心に、3日分の献立を考えます。</p>
 
 <div class="day-card">
   <h3>1日目</h3>
