@@ -10,7 +10,7 @@ function showPlan() {
   result.innerHTML = `
   <h2>3日分の買い物プラン</h2>
 
-<div class="shopping-card">
+<div class="card shopping-card">
  <p class="section-title">買い物リスト</p>
 <p class="small-desc">家にないものだけ買い足しましょう。</p>
 
@@ -24,7 +24,7 @@ function showPlan() {
 
 <p>今日は、家にある食材を先に使うプランです。</p>
 
-<div class="info-card">
+<div class="card info-card">
   <p class="section-title">使い方メモ</p>
   <p><strong>おすすめ：</strong>家にあるものを優先して使いましょう。</p>
   <p class="memo"><strong>買い物メモ：</strong>候補を見て、家にないものだけ買いましょう。</p>
@@ -34,7 +34,7 @@ function showPlan() {
 <p class="section-title">3日分の献立</p>
 <p class="small-desc">先に使う食材を中心に、3日分の献立を考えます。</p>
 
-<div class="day-card">
+<div class="card day-card">
   <h3>1日目</h3>
     <p class="menu-title">献立：${food}を使ったメインおかず</p>
     <p class="menu-desc">${food}を中心に献立を作る日</p>
