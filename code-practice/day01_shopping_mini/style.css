@@ -110,10 +110,6 @@ button:hover {
 }
 .day-card {
   background-color: #f8fafc;
-  padding: 14px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #e5e7eb;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 .day-card h3 {
@@ -127,10 +123,7 @@ button:hover {
 }
 .shopping-card {
   background-color: #f0f9ff;
-  padding: 14px;
-  border-radius: 10px;
-  margin-bottom: 18px;
-  border: 1px solid #bae6fd;
+  border-color: #bae6fd;
   border-left: 5px solid #2563eb;
 }
 .shopping-card li {
@@ -153,10 +146,6 @@ button:hover {
 }
 .info-card {
   background-color: #f9fafb;
-  padding: 14px;
-  border-radius: 10px;
-  margin-bottom: 18px;
-  border: 1px solid #e5e7eb;
   border-left: 5px solid #94a3b8;
 }
 .info-card p {
@@ -172,4 +161,10 @@ button:hover {
 }
 #result p {
   line-height: 1.6;
+}
+.card {
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #e5e7eb;
 }
