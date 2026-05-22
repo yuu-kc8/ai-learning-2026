@@ -15,7 +15,7 @@ function showPlan() {
 <p class="small-desc">家にないものだけを買い足しましょう。</p>
 
 <ul>
-    <li class="main-item">先に使う食材：${food}</li>
+    <li class="main-item">家にある食材：${food}</li>
     <li>卵 1パック</li>
     <li>カット野菜 1袋</li>
     <li>味噌汁の具材</li>
