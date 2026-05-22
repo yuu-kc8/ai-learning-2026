@@ -166,3 +166,7 @@ button:hover {
 .info-card p:last-child {
   margin-bottom: 0;
 }
+#result h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
