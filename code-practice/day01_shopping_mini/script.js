@@ -27,7 +27,7 @@ function showPlan() {
 <div class="card info-card">
   <p class="section-title">買う前の確認メモ</p>
   <p><strong>使い方：</strong>家にあるものを優先して使いましょう。</p>
-  <p class="memo"><strong>買い物メモ：</strong>候補を見て、家にないものだけ買いましょう。</p>
+  <p class="memo"><strong>買い足しメモ：</strong>家にないものだけを買いましょう。</p>
   <p class="note"><strong>注意：</strong>買う前に、家に残っているものを確認しましょう。</p>
 </div>
 
