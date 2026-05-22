@@ -28,7 +28,7 @@ function showPlan() {
   <p class="section-title">買う前の確認メモ</p>
   <p><strong>使い方：</strong>家にあるものを優先して使いましょう。</p>
   <p class="memo"><strong>買い足しメモ：</strong>家にないものだけを買いましょう。</p>
-  <p class="note"><strong>注意：</strong>買う前に、家に残っているものを確認しましょう。</p>
+  <p class="note"><strong>注意：</strong>買う前に、冷蔵庫を確認しましょう。</p>
 </div>
 
 <p class="section-title">3日分の献立</p>
