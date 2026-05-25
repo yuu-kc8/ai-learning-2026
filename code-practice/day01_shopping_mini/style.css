@@ -177,3 +177,8 @@ button:hover {
   font-weight: bold;
   color: #16a34a;
 }
+.home-food-list {
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding-left: 22px;
+}
