@@ -36,7 +36,7 @@ function showPlan() {
 </div>
 
 <p class="section-title">3日分の献立</p>
-<p class="small-desc">先に使う食材を中心に、3日分の献立を考えます。</p>
+<p class="small-desc">家にある食材を中心に、3日分の献立を考えます。</p>
 
 <div class="card day-card">
   <h3>1日目</h3>
