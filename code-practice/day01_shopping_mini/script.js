@@ -12,7 +12,7 @@ function showPlan() {
 
 <div class="card home-card">
   <p class="section-title">家にある食材</p>
-  <p class="small-desc">今日は、${food}を先に使います。</p>
+  <p class="small-desc">今日は、<span class="home-food">${food}</span>を先に使います。</p>
 </div>
 
 <div class="card shopping-card">
