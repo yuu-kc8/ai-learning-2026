@@ -1,7 +1,12 @@
 function showPlan() {
   const food = document.getElementById("foodInput").value;
   const result = document.getElementById("result");
-  const foodItems = food.split(/[、,，]/).map(item => item.trim()).filter(item => item !== "").map(item => `<li><span class="home-food">${item}</span></li>`).join("");
+  const foodItems = food
+  .split(/[、,，]/)
+  .map(item => item.trim())
+  .filter(item => item !== "")
+  .map(item => `<li><span class="home-food">${item}</span></li>`)
+  .join("");
   
   if (food.trim() === "") {
   result.innerHTML = '<p class="error-message">家にある食材を入力してください。</p>';
