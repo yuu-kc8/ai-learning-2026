@@ -52,7 +52,7 @@ function showPlan() {
 
   <div class="day-card">
     <h3>3日目</h3>
-    <p class="menu-title">献立：${food}と味噌汁の具材で使い切りメニュー</p>
+    <p class="menu-title">献立：${food}の使い切りメニュー</p>
     <p class="menu-desc">${food}と買い足した食材を使い切る日</p>
   </div>
   `;
