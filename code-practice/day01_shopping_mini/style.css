@@ -173,3 +173,6 @@ button:hover {
   border-color: #bbf7d0;
   border-left: 5px solid #22c55e;
 }
+.home-food {
+  font-weight: bold;
+}
