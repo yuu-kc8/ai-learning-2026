@@ -1,6 +1,7 @@
 function showPlan() {
   const food = document.getElementById("foodInput").value;
   const result = document.getElementById("result");
+  const foodItems = food.split("、").map(item => `<li><span class="home-food">${item.trim()}</span></li>`).join("");
   
   if (food.trim() === "") {
   result.innerHTML = '<p class="error-message">家にある食材を入力してください。</p>';
@@ -12,7 +13,10 @@ function showPlan() {
 
 <div class="card home-card">
   <p class="section-title">家にある食材</p>
-  <p class="small-desc">今日は、<span class="home-food">${food}</span>を先に使って献立を考えます。</p>
+  <p class="small-desc">今日は、下の食材を先に使って献立を考えます。</p>
+  <ul class="home-food-list">
+    ${foodItems}
+  </ul>
 </div>
 
 <div class="card shopping-card">
