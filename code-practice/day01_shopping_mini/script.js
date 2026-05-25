@@ -26,7 +26,7 @@ function showPlan() {
   </ul>
 </div>
 
-<p>今日は、家にある食材を先に使う3日分プランです。</p>
+<p>家にある食材を先に使って、3日分の献立を考えます。</p>
 
 <div class="card info-card">
   <p class="section-title">買う前の確認メモ</p>
