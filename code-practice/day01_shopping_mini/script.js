@@ -17,7 +17,7 @@ function showPlan() {
 
 <div class="card shopping-card">
   <p class="section-title">買い物リスト</p>
-  <p class="small-desc">家にないものだけを買い足しましょう。</p>
+  <p class="small-desc">買い足すものだけを表示しています。</p>
 
   <ul>
     <li>卵 1パック</li>
