@@ -23,16 +23,20 @@ function showPlan() {
     .map(item => item.trim())
     .filter(item => item !== "");
 
-if (foods.length === 0) {
-  result.innerHTML = `
-    <p class="error-message">食材名を入力してください。</p>
-  `;
-  return;
-}
+  if (foods.length === 0) {
+    result.innerHTML = `
+      <p class="error-message">食材名を入力してください。</p>
+    `;
+    return;
+  }
 
   const foodItems = foods
     .map(item => `<li><span class="home-food">${escapeHTML(item)}</span></li>`)
     .join("");
+
+  const food1 = escapeHTML(foods[0]);
+  const food2 = escapeHTML(foods[1] || foods[0]);
+  const food3 = escapeHTML(foods[2] || foods[0]);
 
   result.innerHTML = `
     <div class="card">
@@ -62,13 +66,13 @@ if (foods.length === 0) {
       <h2>3日分の献立</h2>
 
       <h3 class="menu-title">1日目</h3>
-      <p>家にある食材を使った炒め物</p>
+      <p>${food1}を使った簡単おかず</p>
 
       <h3 class="menu-title">2日目</h3>
-      <p>卵と野菜を足した簡単メニュー</p>
+      <p>${food2}を使った炒め物</p>
 
       <h3 class="menu-title">3日目</h3>
-      <p>残った食材を使ったスープ</p>
+      <p>${food3}を使ったスープ</p>
     </div>
   `;
 }
