@@ -1,68 +1,67 @@
-function showPlan() {
-  const food = document.getElementById("foodInput").value;
-  const result = document.getElementById("result");
-  const foodItems = food
-  .split(/[、,，]/)
-  .map(item => item.trim())
-  .filter(item => item !== "")
-  .map(item => `<li><span class="home-food">${item}</span></li>`)
-  .join("");
-  
-  if (food.trim() === "") {
-  result.innerHTML = '<p class="error-message">家にある食材を入力してください。</p>';
-  return;
+const foodInput = document.getElementById("foodInput");
+const result = document.getElementById("result");
+
+function escapeHTML(text) {
+  return text
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
 }
 
+function showPlan() {
+  const foodText = foodInput.value.trim();
+
+  if (foodText === "") {
+    result.innerHTML = `
+      <p class="error-message">家にある食材を入力してください。</p>
+    `;
+    return;
+  }
+
+  const foods = foodText
+    .split(/[、,，]/)
+    .map(item => item.trim())
+    .filter(item => item !== "");
+
+  const foodItems = foods
+    .map(item => `<li><span class="home-food">${escapeHTML(item)}</span></li>`)
+    .join("");
+
   result.innerHTML = `
-  <h2>3日分の買い物プラン</h2>
+    <div class="card">
+      <h2>家にある食材</h2>
+      <p>入力した食材はこちらです。</p>
+      <ul>
+        ${foodItems}
+      </ul>
+    </div>
 
-<div class="card home-card">
-  <p class="section-title">家にある食材</p>
-  <p class="small-desc">今日は、下の食材を先に使って献立を考えます。</p>
-  <ul class="home-food-list">
-    ${foodItems}
-  </ul>
-</div>
+    <div class="card shopping-card">
+      <h2>買い物リスト</h2>
+      <ul>
+        <li>卵</li>
+        <li>牛乳</li>
+        <li>きのこ</li>
+        <li>冷凍野菜</li>
+      </ul>
+    </div>
 
-<div class="card shopping-card">
-  <p class="section-title">買い物リスト</p>
-  <p class="small-desc">買い足すものだけを表示しています。</p>
+    <div class="card info-card">
+      <h2>買う前の確認メモ</h2>
+      <p>家にある食材を先に使えるか確認してから買い足しましょう。</p>
+    </div>
 
-  <ul>
-    <li>卵 1パック</li>
-    <li>カット野菜 1袋</li>
-    <li>味噌汁の具材 1袋</li>
-  </ul>
-</div>
+    <div class="card day-card">
+      <h2>3日分の献立</h2>
 
-<p>家にある食材を先に使って、3日分の献立を考えます。</p>
+      <h3 class="menu-title">1日目</h3>
+      <p>家にある食材を使った炒め物</p>
 
-<div class="card info-card">
-  <p class="section-title">買う前の確認メモ</p>
-  <p><strong>使い方：</strong>家にあるものを優先して使いましょう。</p>
-  <p class="memo"><strong>買い足しメモ：</strong>家にないものだけを買いましょう。</p>
-  <p class="note"><strong>注意：</strong>買う前に、冷蔵庫を確認しましょう。</p>
-</div>
+      <h3 class="menu-title">2日目</h3>
+      <p>卵と野菜を足した簡単メニュー</p>
 
-<p class="section-title">3日分の献立</p>
-<p class="small-desc">家にある食材を中心に、3日分の献立を考えます。</p>
-
-<div class="card day-card">
-  <h3>1日目</h3>
-    <p class="menu-title">献立：${food}を使ったメインおかず</p>
-    <p class="menu-desc">${food}を中心に献立を作る日</p>
-  </div>
-
-  <div class="day-card">
-    <h3>2日目</h3>
-    <p class="menu-title">献立：卵とカット野菜の炒めもの</p>
-    <p class="menu-desc">卵・カット野菜・味噌汁の具材を使って作る日</p>
-  </div>
-
-  <div class="day-card">
-    <h3>3日目</h3>
-    <p class="menu-title">献立：${food}の使い切りメニュー</p>
-    <p class="menu-desc">${food}と買い足した食材を使い切る日</p>
-  </div>
+      <h3 class="menu-title">3日目</h3>
+      <p>残った食材を使ったスープ</p>
+    </div>
   `;
 }
