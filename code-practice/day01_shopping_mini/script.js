@@ -47,15 +47,16 @@ function showPlan() {
       </ul>
     </div>
 
-    <div class="card shopping-card">
-      <h2>買い物リスト</h2>
-      <ul>
-        <li>卵</li>
-        <li>牛乳</li>
-        <li>きのこ</li>
-        <li>冷凍野菜</li>
-      </ul>
-    </div>
+   <div class="card shopping-card">
+  <h2>買い足しメモ</h2>
+  <p>家にある食材とは別に、足すと使いやすいものです。</p>
+  <ul>
+    <li>卵</li>
+    <li>牛乳</li>
+    <li>きのこ</li>
+    <li>冷凍野菜</li>
+  </ul>
+</div>
 
     <div class="card info-card">
       <h2>買う前の確認メモ</h2>
