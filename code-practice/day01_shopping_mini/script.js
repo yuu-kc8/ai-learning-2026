@@ -38,6 +38,18 @@ function showPlan() {
   const food2 = escapeHTML(foods[1] || foods[0]);
   const food3 = escapeHTML(foods[2] || foods[0]);
 
+  const shoppingCandidates = ["卵", "牛乳", "きのこ", "冷凍野菜"];
+
+  const shoppingItems = shoppingCandidates
+    .filter(item => !foods.includes(item))
+    .map(item => `<li>${escapeHTML(item)}</li>`)
+    .join("");
+
+  const shoppingMessage =
+    shoppingItems === ""
+      ? "<li>今ある食材を先に使えそうです。</li>"
+      : shoppingItems;
+
   result.innerHTML = `
     <div class="card">
       <h2>家にある食材</h2>
@@ -47,16 +59,13 @@ function showPlan() {
       </ul>
     </div>
 
-   <div class="card shopping-card">
-  <h2>買い足しメモ</h2>
-  <p>家にある食材とは別に、足すと使いやすいものです。</p>
-  <ul>
-    <li>卵</li>
-    <li>牛乳</li>
-    <li>きのこ</li>
-    <li>冷凍野菜</li>
-  </ul>
-</div>
+    <div class="card shopping-card">
+      <h2>買い足しメモ</h2>
+      <p>家にある食材とは別に、足すと使いやすいものです。</p>
+      <ul>
+        ${shoppingMessage}
+      </ul>
+    </div>
 
     <div class="card info-card">
       <h2>買う前の確認メモ</h2>
