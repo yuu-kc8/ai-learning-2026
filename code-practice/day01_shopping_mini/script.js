@@ -23,6 +23,13 @@ function showPlan() {
     .map(item => item.trim())
     .filter(item => item !== "");
 
+if (foods.length === 0) {
+  result.innerHTML = `
+    <p class="error-message">食材名を入力してください。</p>
+  `;
+  return;
+}
+
   const foodItems = foods
     .map(item => `<li><span class="home-food">${escapeHTML(item)}</span></li>`)
     .join("");
