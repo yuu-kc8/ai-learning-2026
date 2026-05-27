@@ -76,7 +76,7 @@ function showPlan() {
       <h2>3日分の献立</h2>
 
       <h3 class="menu-title">1日目</h3>
-      <p>${food1}を使った簡単おかず</p>
+      <p>${food1}を使ったメインおかず</p>
 
       <h3 class="menu-title">2日目</h3>
       <p>${food2}を使った炒め物</p>
