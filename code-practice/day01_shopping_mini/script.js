@@ -82,7 +82,7 @@ function showPlan() {
       <p>${food2}と野菜の炒め物</p>
 
       <h3 class="menu-title">3日目</h3>
-      <p>${food3}を使ったスープ</p>
+      <p>${food3}のあったかスープ</p>
     </div>
   `;
 }
