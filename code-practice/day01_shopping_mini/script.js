@@ -61,7 +61,7 @@ function showPlan() {
 
     <div class="card shopping-card">
       <h2>買い足しメモ</h2>
-      <p>家にある食材とは別に、足すと使いやすいものです。</p>
+      <p>家にある食材に足すと使いやすいものです。</p>
       <ul>
         ${shoppingMessage}
       </ul>
