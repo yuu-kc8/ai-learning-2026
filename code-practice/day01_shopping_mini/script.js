@@ -69,7 +69,7 @@ function showPlan() {
 
     <div class="card info-card">
       <h2>買う前の確認メモ</h2>
-      <p>家にある食材を先に使えるか確認してから買い足しましょう。</p>
+      <p>家にある食材を先に使ってから、必要なものを買い足しましょう。</p>
     </div>
 
     <div class="card day-card">
