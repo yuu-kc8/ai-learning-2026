@@ -37,6 +37,23 @@ function showPlan() {
   const food1 = escapeHTML(foods[0]);
   const food2 = escapeHTML(foods[1] || foods[0]);
   const food3 = escapeHTML(foods[2] || foods[0]);
+  const extraFoods = foods
+  .slice(3)
+  .map(item => `<li><span class="home-food">${escapeHTML(item)}</span></li>`)
+  .join("");
+
+const extraFoodCard =
+  extraFoods === ""
+    ? ""
+    : `
+      <div class="card">
+        <h2>予備の食材</h2>
+        <p>4個目以降の食材はこちらです。</p>
+        <ul>
+          ${extraFoods}
+        </ul>
+      </div>
+    `;
 
   const shoppingCandidates = ["卵", "牛乳", "きのこ", "冷凍野菜"];
 
@@ -58,7 +75,8 @@ function showPlan() {
         ${foodItems}
       </ul>
     </div>
-
+    ${extraFoodCard}
+    
     <div class="card shopping-card">
       <h2>買い足しメモ</h2>
       <p>家にある食材に足すと使いやすいものです。</p>
