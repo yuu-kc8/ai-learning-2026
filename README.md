@@ -23,4 +23,4 @@ AI学習の基礎メモと、小さい作品をためる場所です。
 - 3日分の献立に、入力した食材を反映できる
 
 公開ページ：
-https://yuu-kc8.github.io/ai-learning-2026/code-practice/day01_shopping_mini/index.html
+[3日分の買い物プラン練習を開く](https://yuu-kc8.github.io/ai-learning-2026/code-practice/day01_shopping_mini/index.html)
