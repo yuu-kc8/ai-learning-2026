@@ -48,7 +48,7 @@ const extraFoodCard =
     : `
       <div class="card">
         <h2>予備の食材</h2>
-        <p>4個目以降の食材はこちらです。</p>
+        <p>献立には使っていない予備の食材です。</p>
         <ul>
           ${extraFoods}
         </ul>
