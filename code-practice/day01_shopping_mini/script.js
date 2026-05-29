@@ -79,7 +79,7 @@ const extraFoodCard =
     
     <div class="card shopping-card">
       <h2>買い足しメモ</h2>
-      <p>家にある食材に足すと使いやすいものです。</p>
+      <p>家にある食材に足すと使いやすい、仮の買い足し候補です。</p>
       <ul>
         ${shoppingMessage}
       </ul>
