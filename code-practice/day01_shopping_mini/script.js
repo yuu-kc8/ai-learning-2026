@@ -95,7 +95,7 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
     </div>
 
  <div class="card day-card">
-  <h2>3日分の献立</h2>
+  <h2>3日分の献立 <span class="status-badge">確認OK</span></h2>
   <p class="plan-summary">家にある食材を使って、3日分の献立を日ごとに確認できます。</p>
 
   <div class="menu-day">
