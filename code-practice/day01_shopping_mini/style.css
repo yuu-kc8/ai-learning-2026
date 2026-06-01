@@ -258,3 +258,12 @@ button:hover {
 .shopping-note-label {
   font-weight: bold;
 }
+.menu-description {
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.description-label {
+  font-weight: bold;
+  color: #333;
+}
