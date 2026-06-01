@@ -276,3 +276,10 @@ button:hover {
   font-weight: bold;
   color: #333;
 }
+.plan-summary {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
