@@ -99,17 +99,17 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
 
   <div class="menu-day">
     <h3 class="menu-title">1日目</h3>
-    <p>${food1}を使ったメインおかず</p>
+    <p><span class="menu-food">${food1}</span>を使ったメインおかず</p>
   </div>
 
   <div class="menu-day">
     <h3 class="menu-title">2日目</h3>
-    <p>${food2}と野菜の炒め物</p>
+    <p><span class="menu-food">${food2}</span>と野菜の炒め物</p>
   </div>
 
   <div class="menu-day">
     <h3 class="menu-title">3日目</h3>
-    <p>${food3}のあったかスープ</p>
+    <p><span class="menu-food">${food3}</span>のあったかスープ</p>
   </div>
 </div>
 `;
