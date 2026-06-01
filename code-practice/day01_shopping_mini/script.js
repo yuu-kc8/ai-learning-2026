@@ -102,6 +102,7 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
 <p class="menu-name">メニュー：${food1}のメインおかず</p>
 <p class="used-food">使う食材：<span class="menu-food">${food1}</span></p>
 <p class="menu-rating">おすすめ度：★★★</p>
+<p class="rating-note">家にある食材を使いやすいメニューです。</p>
 <p>家にある<span class="menu-food">${food1}</span>を使って、食べごたえのある1品にします。</p>
   </div>
 
@@ -110,6 +111,7 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
     <p class="menu-name">メニュー：${food2}と野菜の炒め物</p>
 <p class="used-food">使う食材：<span class="menu-food">${food2}</span></p>
 <p class="menu-rating">おすすめ度：★★☆</p>
+<p class="rating-note">野菜と合わせやすいメニューです。</p>
 <p><span class="menu-food">${food2}</span>と野菜を合わせて、手早く作れるおかずにします。</p>
   </div>
 
@@ -118,6 +120,7 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
     <p class="menu-name">メニュー：${food3}のあったかスープ</p>
 <p class="used-food">使う食材：<span class="menu-food">${food3}</span></p>
 <p class="menu-rating">おすすめ度：★★☆</p>
+<p class="rating-note">あたたかい汁物にしやすいメニューです。</p>
 <p><span class="menu-food">${food3}</span>を使って、あたたかいスープにします。</p>
   </div>
 </div>
