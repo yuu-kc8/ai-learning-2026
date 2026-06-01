@@ -255,3 +255,6 @@ button:hover {
   color: #92400e;
   background-color: #fffbeb;
 }
+.shopping-note-label {
+  font-weight: bold;
+}
