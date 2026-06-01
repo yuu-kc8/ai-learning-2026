@@ -55,12 +55,16 @@ const extraFoodCard =
       </div>
     `;
 
-  const shoppingCandidates = ["卵", "牛乳", "きのこ", "冷凍野菜"];
+ const shoppingCandidates = ["卵", "牛乳", "きのこ", "冷凍野菜"];
 
-  const shoppingItems = shoppingCandidates
-    .filter(item => !foods.includes(item))
-    .map(item => `<li>${escapeHTML(item)}</li>`)
-    .join("");
+const shoppingList = shoppingCandidates
+  .filter(item => !foods.includes(item));
+
+const shoppingItems = shoppingList
+  .map(item => `<li>${escapeHTML(item)}</li>`)
+  .join("");
+
+const shoppingCountText = `候補 ${shoppingList.length}個`;
 
   const shoppingMessage =
     shoppingItems === ""
@@ -78,7 +82,7 @@ const extraFoodCard =
     ${extraFoodCard}
     
     <div class="card shopping-card">
-      <h2>買い足しメモ</h2>
+      <h2>買い足しメモ <span class="count-label">${shoppingCountText}</span></h2>
       <p>家にある食材に足すと使いやすい、仮の買い足し候補です。</p>
       <ul>
         ${shoppingMessage}
