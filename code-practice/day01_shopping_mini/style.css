@@ -223,3 +223,8 @@ button:hover {
   font-size: 13px;
   color: #555;
 }
+.menu-name {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
