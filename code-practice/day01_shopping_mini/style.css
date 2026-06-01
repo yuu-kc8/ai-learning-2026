@@ -233,3 +233,10 @@ button:hover {
 .menu-day p:last-child {
   margin-bottom: 0;
 }
+.menu-rating {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #f59e0b;
+}
