@@ -219,12 +219,17 @@ button:hover {
   color: #16a34a;
 }
 .used-food {
+  margin-top: 0;
   margin-bottom: 6px;
   font-size: 13px;
   color: #555;
 }
 .menu-name {
-  margin-bottom: 6px;
+  margin-top: 10px;
+  margin-bottom: 4px;
   font-weight: bold;
   color: #333;
+}
+.menu-day p:last-child {
+  margin-bottom: 0;
 }
