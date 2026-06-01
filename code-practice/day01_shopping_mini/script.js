@@ -94,17 +94,23 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
       <p>家にある食材を先に使ってから、必要なものを買い足しましょう。</p>
     </div>
 
-    <div class="card day-card">
-      <h2>3日分の献立</h2>
+ <div class="card day-card">
+  <h2>3日分の献立</h2>
 
-      <h3 class="menu-title">1日目</h3>
-      <p>${food1}を使ったメインおかず</p>
+  <div class="menu-day">
+    <h3 class="menu-title">1日目</h3>
+    <p>${food1}を使ったメインおかず</p>
+  </div>
 
-      <h3 class="menu-title">2日目</h3>
-      <p>${food2}と野菜の炒め物</p>
+  <div class="menu-day">
+    <h3 class="menu-title">2日目</h3>
+    <p>${food2}と野菜の炒め物</p>
+  </div>
 
-      <h3 class="menu-title">3日目</h3>
-      <p>${food3}のあったかスープ</p>
-    </div>
-  `;
+  <div class="menu-day">
+    <h3 class="menu-title">3日目</h3>
+    <p>${food3}のあったかスープ</p>
+  </div>
+</div>
+`;
 }
