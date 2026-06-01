@@ -229,6 +229,7 @@ button:hover {
 .menu-name {
   margin-top: 10px;
   margin-bottom: 4px;
+  font-size: 15px;
   font-weight: bold;
   color: #333;
 }
@@ -263,6 +264,8 @@ button:hover {
 .menu-description {
   margin-top: 6px;
   margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .description-label {
