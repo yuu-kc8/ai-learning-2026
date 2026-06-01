@@ -283,3 +283,12 @@ button:hover {
   color: #555;
   line-height: 1.6;
 }
+.status-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #15803d;
+  background-color: #dcfce7;
+}
