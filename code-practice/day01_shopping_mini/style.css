@@ -209,6 +209,8 @@ button:hover {
   border-radius: 10px;
   background-color: #ffffff;
   border: 1px solid #fde68a;
+  border-left: 5px solid #3b82f6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .menu-day p {
