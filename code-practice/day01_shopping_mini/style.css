@@ -343,3 +343,12 @@ button:hover {
 .overview-point li {
   margin-bottom: 4px;
 }
+.overview-status {
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #166534;
+  background-color: #dcfce7;
+}

@@ -73,8 +73,9 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
 
   result.innerHTML = `
   <div class="card plan-overview">
-  <h2>今回のプランまとめ</h2>
+  <h2>今回のプランまとめ <span class="status-badge">プラン作成完了</span></h2>
   <p>家にある食材・買い足し候補・3日分の献立をまとめて確認できます。</p>
+<p class="overview-status">このプランは入力された食材をもとに作成されています。</p>
     <ul class="overview-list">
     <li>入力した食材：${foods.length}個</li>
     <li>買い足し候補：${shoppingList.length}個</li>
