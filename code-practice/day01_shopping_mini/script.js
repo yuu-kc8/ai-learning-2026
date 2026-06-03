@@ -176,9 +176,9 @@ function markShoppingCheckDone() {
 
   if (checkMessage) {
     checkMessage.innerHTML = `
-      <strong>買い物チェック完了</strong>
-      <p>買い物リストを見て、必要なものだけ買いましょう。</p>
-    `;
+  <div class="check-message-title">✅ 買い物チェック完了</div>
+  <p>買い物リストを見て、必要なものだけ買いましょう。</p>
+`;
   }
 
   if (checkButton) {
