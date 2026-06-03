@@ -112,7 +112,7 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
 
     <div id="shoppingCheck" class="card info-card">
   <h2>買う前の確認メモ <span id="shoppingCheckStatus" class="status-badge">買い物確認OK</span></h2>
-  <p>家にある食材を先に使ってから、必要なものを買い足しましょう。</p>
+  <p id="shoppingCheckText">家にある食材を先に使ってから、必要なものを買い足しましょう。</p>
   <ul class="check-list">
   <li>家にある食材を先に使う</li>
   <li>足りない食材だけを買い足す</li>
@@ -171,25 +171,30 @@ function scrollToShoppingCheck() {
   }
 }
 function markShoppingCheckDone() {
-const checkCard = document.getElementById("shoppingCheck");
-const checkStatus = document.getElementById("shoppingCheckStatus");
-const checkMessage = document.getElementById("shoppingCheckMessage");
-const checkButton = document.getElementById("shoppingCheckButton");
+  const checkCard = document.getElementById("shoppingCheck");
+  const checkStatus = document.getElementById("shoppingCheckStatus");
+  const checkText = document.getElementById("shoppingCheckText");
+  const checkMessage = document.getElementById("shoppingCheckMessage");
+  const checkButton = document.getElementById("shoppingCheckButton");
 
-if (checkCard) {
-  checkCard.classList.add("checked-card");
-}
+  if (checkCard) {
+    checkCard.classList.add("checked-card");
+  }
 
-if (checkStatus) {
-  checkStatus.textContent = "確認完了";
-  checkStatus.classList.add("done-label");
-}
+  if (checkStatus) {
+    checkStatus.textContent = "確認完了";
+    checkStatus.classList.add("done-label");
+  }
+
+  if (checkText) {
+    checkText.textContent = "買い物前チェックは完了しました。必要なものだけを買いましょう。";
+  }
 
   if (checkMessage) {
     checkMessage.innerHTML = `
-  <div class="check-message-title">✅ 買い物チェック完了</div>
-  <p>買い物リストを見て、必要なものだけ買いましょう。</p>
-`;
+      <div class="check-message-title">✅ 買い物チェック完了</div>
+      <p>買い物リストを見て、必要なものだけ買いましょう。</p>
+    `;
   }
 
   if (checkButton) {
