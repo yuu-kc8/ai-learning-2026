@@ -113,7 +113,7 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
     <div id="shoppingCheck" class="card info-card">
   <h2>買う前の確認メモ <span id="shoppingCheckStatus" class="status-badge">買い物確認OK</span></h2>
   <p id="shoppingCheckText">家にある食材を先に使ってから、必要なものを買い足しましょう。</p>
-  <ul class="check-list">
+  <ul id="shoppingCheckList" class="check-list">
   <li>家にある食材を先に使う</li>
   <li>足りない食材だけを買い足す</li>
   <li>買いすぎないように確認する</li>
@@ -158,22 +158,11 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
 </div>
 `;
 }
-function scrollToShoppingCheck() {
-  const shoppingCheck = document.querySelector(".info-card");
-
-  if (shoppingCheck) {
-    shoppingCheck.scrollIntoView({ behavior: "smooth" });
-    shoppingCheck.classList.add("highlight-card");
-
-    setTimeout(() => {
-      shoppingCheck.classList.remove("highlight-card");
-    }, 1500);
-  }
-}
 function markShoppingCheckDone() {
   const checkCard = document.getElementById("shoppingCheck");
   const checkStatus = document.getElementById("shoppingCheckStatus");
   const checkText = document.getElementById("shoppingCheckText");
+  const checkList = document.getElementById("shoppingCheckList");
   const checkMessage = document.getElementById("shoppingCheckMessage");
   const checkButton = document.getElementById("shoppingCheckButton");
 
@@ -188,6 +177,10 @@ function markShoppingCheckDone() {
 
   if (checkText) {
     checkText.textContent = "買い物前チェックは完了しました。必要なものだけを買いましょう。";
+  }
+
+  if (checkList) {
+    checkList.classList.add("checked-list");
   }
 
   if (checkMessage) {

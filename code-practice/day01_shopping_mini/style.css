@@ -461,3 +461,11 @@ button:hover {
   background-color: #dcfce7;
   border: 1px solid #86efac;
 }
+.checked-list li {
+  color: #15803d;
+  font-weight: bold;
+}
+
+.checked-list li::marker {
+  color: #16a34a;
+}
