@@ -171,8 +171,13 @@ function scrollToShoppingCheck() {
   }
 }
 function markShoppingCheckDone() {
-  const checkMessage = document.getElementById("shoppingCheckMessage");
-  const checkButton = document.getElementById("shoppingCheckButton");
+  const checkCard = document.getElementById("shoppingCheck");
+const checkMessage = document.getElementById("shoppingCheckMessage");
+const checkButton = document.getElementById("shoppingCheckButton");
+
+if (checkCard) {
+  checkCard.classList.add("checked-card");
+}
 
   if (checkMessage) {
     checkMessage.innerHTML = `
