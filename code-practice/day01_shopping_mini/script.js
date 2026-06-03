@@ -82,7 +82,7 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
     ${extraFoodCard}
     
     <div class="card shopping-card">
-      <h2>買い足しメモ <span class="count-label">${shoppingCountText}</span></h2>
+      <h2>買い足しメモ <span class="count-label">${shoppingCountText}</span> <span class="status-badge">買い足し確認</span></h2>
       <p>家にある食材に足すと使いやすい、仮の買い足し候補です。</p>
       <ul>
         ${shoppingMessage}
