@@ -156,5 +156,10 @@ function scrollToShoppingCheck() {
 
   if (shoppingCheck) {
     shoppingCheck.scrollIntoView({ behavior: "smooth" });
+    shoppingCheck.classList.add("highlight-card");
+
+    setTimeout(() => {
+      shoppingCheck.classList.remove("highlight-card");
+    }, 1500);
   }
 }
