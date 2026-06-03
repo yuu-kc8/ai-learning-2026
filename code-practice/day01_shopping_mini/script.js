@@ -179,7 +179,8 @@ function markShoppingCheckDone() {
   }
 
 if (button) {
-  button.textContent = "確認済み";
-  button.classList.add("done-button");
+  checkButton.textContent = "確認済み";
+checkButton.classList.add("checked");
+checkButton.disabled = true;
 }
 }
