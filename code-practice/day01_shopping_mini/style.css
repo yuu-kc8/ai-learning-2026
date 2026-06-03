@@ -397,11 +397,15 @@ button:hover {
   cursor: pointer;
 }
 .check-message {
-  margin-top: 8px;
+  margin-top: 10px;
   margin-bottom: 0;
+  padding: 8px;
+  border-radius: 8px;
   font-size: 13px;
   font-weight: bold;
   color: #15803d;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
 }
 .done-button {
   color: #ffffff;
