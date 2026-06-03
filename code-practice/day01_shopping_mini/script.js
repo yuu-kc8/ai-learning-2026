@@ -118,7 +118,8 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
   <li>足りない食材だけを買い足す</li>
   <li>買いすぎないように確認する</li>
 </ul>
-<p class="check-done">確認しました</p>
+<button class="check-done" onclick="markShoppingCheckDone()">確認しました</button>
+<p id="shoppingCheckMessage" class="check-message"></p>
 </div>
 
  <div class="card day-card">
@@ -167,5 +168,12 @@ function scrollToShoppingCheck() {
     setTimeout(() => {
       shoppingCheck.classList.remove("highlight-card");
     }, 1500);
+  }
+}
+function markShoppingCheckDone() {
+  const message = document.getElementById("shoppingCheckMessage");
+
+  if (message) {
+    message.textContent = "買い物チェック完了";
   }
 }
