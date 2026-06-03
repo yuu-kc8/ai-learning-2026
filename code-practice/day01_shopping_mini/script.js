@@ -83,11 +83,11 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
 
   <div class="overview-point">
   <p class="overview-point-title">確認する順番</p>
-  <ul>
-    <li>1. 家にある食材を確認</li>
-    <li>2. 買い足し候補を確認</li>
-    <li>3. 3日分の献立を確認</li>
-  </ul>
+  <ol>
+    <li>家にある食材を確認</li>
+    <li>買い足し候補を確認</li>
+    <li>3日分の献立を確認</li>
+  </ol>
 </div>
 </div>
     <div class="card">
