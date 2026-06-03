@@ -317,3 +317,29 @@ button:hover {
 .overview-list li {
   margin-bottom: 4px;
 }
+.overview-point {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #bbf7d0;
+}
+
+.overview-point-title {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #166534;
+}
+
+.overview-point ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 20px;
+  color: #166534;
+  font-size: 13px;
+}
+
+.overview-point li {
+  margin-bottom: 4px;
+}
