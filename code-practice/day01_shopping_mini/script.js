@@ -158,41 +158,21 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
 </div>
 `;
 }
-function markShoppingCheckDone() {
-  const checkCard = document.getElementById("shoppingCheck");
-  const checkStatus = document.getElementById("shoppingCheckStatus");
-  const checkText = document.getElementById("shoppingCheckText");
-  const checkList = document.getElementById("shoppingCheckList");
-  const checkMessage = document.getElementById("shoppingCheckMessage");
-  const checkButton = document.getElementById("shoppingCheckButton");
+function scrollToShoppingCheck() {
+  const shoppingCheck = document.getElementById("shoppingCheck");
 
-  if (checkCard) {
-    checkCard.classList.add("checked-card");
+  if (!shoppingCheck) {
+    return;
   }
 
-  if (checkStatus) {
-    checkStatus.textContent = "確認完了";
-    checkStatus.classList.add("done-label");
-  }
+  shoppingCheck.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
 
-  if (checkText) {
-    checkText.textContent = "買い物前チェックは完了しました。必要なものだけを買いましょう。";
-  }
+  shoppingCheck.classList.add("highlight-card");
 
-  if (checkList) {
-    checkList.classList.add("checked-list");
-  }
-
-  if (checkMessage) {
-    checkMessage.innerHTML = `
-      <div class="check-message-title">✅ 買い物チェック完了</div>
-      <p>買い物リストを見て、必要なものだけ買いましょう。</p>
-    `;
-  }
-
-  if (checkButton) {
-    checkButton.textContent = "確認済み";
-    checkButton.classList.add("checked");
-    checkButton.disabled = true;
-  }
+  setTimeout(() => {
+    shoppingCheck.classList.remove("highlight-card");
+  }, 1500);
 }
