@@ -411,3 +411,7 @@ button:hover {
   color: #ffffff;
   background-color: #15803d !important;
 }
+.check-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
