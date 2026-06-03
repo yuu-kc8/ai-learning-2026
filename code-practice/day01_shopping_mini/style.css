@@ -456,3 +456,8 @@ button:hover {
   opacity: 1;
   cursor: not-allowed;
 }
+.status-badge.done-label {
+  color: #15803d;
+  background-color: #dcfce7;
+  border: 1px solid #86efac;
+}

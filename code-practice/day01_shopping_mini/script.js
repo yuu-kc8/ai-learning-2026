@@ -111,7 +111,7 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
     </div>
 
     <div id="shoppingCheck" class="card info-card">
-  <h2>買う前の確認メモ <span class="status-badge">買い物確認OK</span></h2>
+  <h2>買う前の確認メモ <span id="shoppingCheckStatus" class="status-badge">買い物確認OK</span></h2>
   <p>家にある食材を先に使ってから、必要なものを買い足しましょう。</p>
   <ul class="check-list">
   <li>家にある食材を先に使う</li>
@@ -171,12 +171,18 @@ function scrollToShoppingCheck() {
   }
 }
 function markShoppingCheckDone() {
-  const checkCard = document.getElementById("shoppingCheck");
+const checkCard = document.getElementById("shoppingCheck");
+const checkStatus = document.getElementById("shoppingCheckStatus");
 const checkMessage = document.getElementById("shoppingCheckMessage");
 const checkButton = document.getElementById("shoppingCheckButton");
 
 if (checkCard) {
   checkCard.classList.add("checked-card");
+}
+
+if (checkStatus) {
+  checkStatus.textContent = "確認完了";
+  checkStatus.classList.add("done-label");
 }
 
   if (checkMessage) {
