@@ -371,3 +371,13 @@ button:hover {
   border-color: #22c55e;
   box-shadow: 0 0 0 4px #dcfce7;
 }
+.check-list {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.check-list li {
+  margin-bottom: 6px;
+}
