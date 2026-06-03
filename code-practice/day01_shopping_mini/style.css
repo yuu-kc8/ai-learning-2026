@@ -367,3 +367,7 @@ button:hover {
   background-color: #22c55e;
   cursor: pointer;
 }
+.highlight-card {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 4px #dcfce7;
+}
