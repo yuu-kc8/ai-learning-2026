@@ -91,7 +91,7 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
   </ol>
 </div>
 
-<p class="next-action">買い物前チェックへ進む</p>
+<button class="next-action" onclick="scrollToShoppingCheck()">買い物前チェックへ進む</button>
 </div>
     <div class="card">
       <h2>家にある食材</h2>
@@ -150,4 +150,11 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
   </div>
 </div>
 `;
+}
+function scrollToShoppingCheck() {
+  const shoppingCheck = document.querySelector(".info-card");
+
+  if (shoppingCheck) {
+    shoppingCheck.scrollIntoView({ behavior: "smooth" });
+  }
 }

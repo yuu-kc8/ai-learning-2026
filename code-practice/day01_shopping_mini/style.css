@@ -353,12 +353,17 @@ button:hover {
   background-color: #dcfce7;
 }
 .next-action {
+  display: block;
+  width: 100%;
   margin-top: 12px;
   margin-bottom: 0;
   padding: 10px;
+  border: none;
   border-radius: 8px;
   text-align: center;
+  font-size: 14px;
   font-weight: bold;
   color: #ffffff;
   background-color: #22c55e;
+  cursor: pointer;
 }
