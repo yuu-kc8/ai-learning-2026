@@ -422,7 +422,8 @@ button:hover {
   color: #ffffff;
   background-color: #15803d !important;
 }
-.check-button:disabled {
+.check-button:disabled,
+.check-button:disabled:hover {
   color: #15803d;
   background-color: #dcfce7;
   border: 1px solid #86efac;
