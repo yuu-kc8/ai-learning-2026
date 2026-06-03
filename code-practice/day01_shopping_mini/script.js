@@ -178,7 +178,8 @@ function markShoppingCheckDone() {
     message.textContent = "買い物チェック完了";
   }
 
-  if (button) {
-    button.textContent = "確認済み";
-  }
+if (button) {
+  button.textContent = "確認済み";
+  button.classList.add("done-button");
+}
 }

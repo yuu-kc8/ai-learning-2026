@@ -403,3 +403,7 @@ button:hover {
   font-weight: bold;
   color: #15803d;
 }
+.done-button {
+  color: #ffffff;
+  background-color: #15803d;
+}
