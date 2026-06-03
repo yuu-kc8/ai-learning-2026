@@ -406,11 +406,17 @@ button:hover {
   color: #15803d;
   background-color: #f0fdf4;
   border: 1px solid #bbf7d0;
-  .check-message p {
+}
+
+.check-message p {
   margin: 6px 0 0;
   font-size: 13px;
   font-weight: normal;
 }
+
+.check-message-title {
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 .done-button {
   color: #ffffff;
