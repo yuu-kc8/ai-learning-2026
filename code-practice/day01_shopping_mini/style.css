@@ -382,13 +382,24 @@ button:hover {
   margin-bottom: 6px;
 }
 .check-done {
+  display: block;
+  width: 100%;
   margin-top: 12px;
   margin-bottom: 0;
   padding: 10px;
+  border: none;
   border-radius: 8px;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
   color: #166534;
   background-color: #dcfce7;
+  cursor: pointer;
+}
+.check-message {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #15803d;
 }
