@@ -111,9 +111,14 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
     </div>
 
     <div class="card info-card">
-      <h2>買う前の確認メモ <span class="status-badge">買い物確認OK</span></h2>
-      <p>家にある食材を先に使ってから、必要なものを買い足しましょう。</p>
-    </div>
+  <h2>買う前の確認メモ <span class="status-badge">買い物確認OK</span></h2>
+  <p>家にある食材を先に使ってから、必要なものを買い足しましょう。</p>
+  <ul class="check-list">
+    <li>家にある食材を先に使う</li>
+    <li>足りない食材だけを買い足す</li>
+    <li>買いすぎないように確認する</li>
+  </ul>
+</div>
 
  <div class="card day-card">
   <h2>3日分の献立 <span class="status-badge">献立確認OK</span></h2>
