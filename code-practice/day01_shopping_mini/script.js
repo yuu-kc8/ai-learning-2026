@@ -90,6 +90,8 @@ const shoppingCountText = `候補 ${shoppingList.length}個`;
     <li>3日分の献立を確認する</li>
   </ol>
 </div>
+
+<p class="next-action">買い物前チェックへ進む</p>
 </div>
     <div class="card">
       <h2>家にある食材</h2>
