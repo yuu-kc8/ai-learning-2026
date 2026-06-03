@@ -171,16 +171,19 @@ function scrollToShoppingCheck() {
   }
 }
 function markShoppingCheckDone() {
-  const message = document.getElementById("shoppingCheckMessage");
-  const button = document.getElementById("shoppingCheckButton");
+  const checkMessage = document.getElementById("shoppingCheckMessage");
+  const checkButton = document.getElementById("shoppingCheckButton");
 
-  if (message) {
-    message.textContent = "買い物チェック完了";
+  if (checkMessage) {
+    checkMessage.innerHTML = `
+      <strong>買い物チェック完了</strong>
+      <p>買い物リストを見て、必要なものだけ買いましょう。</p>
+    `;
   }
 
-if (button) {
-  checkButton.textContent = "確認済み";
-checkButton.classList.add("checked");
-checkButton.disabled = true;
-}
+  if (checkButton) {
+    checkButton.textContent = "確認済み";
+    checkButton.classList.add("checked");
+    checkButton.disabled = true;
+  }
 }
