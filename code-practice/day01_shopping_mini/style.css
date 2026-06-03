@@ -446,3 +446,13 @@ button:hover {
   background-color: #f0fdf4 !important;
   border: 1px solid #86efac !important;
 }
+.check-done.checked,
+.check-done.checked:hover,
+.check-done:disabled,
+.check-done:disabled:hover {
+  color: #15803d !important;
+  background-color: #dcfce7 !important;
+  border: 1px solid #86efac !important;
+  opacity: 1;
+  cursor: not-allowed;
+}
