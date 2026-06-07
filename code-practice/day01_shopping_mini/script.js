@@ -21,7 +21,7 @@ function showPlan() {
     result.innerHTML = `
       <div class="card error-card">
         <h2>入力エラー</h2>
-        <p>食材を1つ以上入力してください。</p>
+        <p>食材を1つ以上入力してください。例：鶏肉、豆腐、キャベツ</p>
       </div>
     `;
     return;
