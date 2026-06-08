@@ -72,7 +72,7 @@ function showPlan() {
   </ol>
 </div>
 
-      <button class="next-action" onclick="scrollToShoppingCheck()">買い物前チェックへ進む</button>
+      <button class="next-action" onclick="scrollToShoppingMemo()">買い足しメモへ進む</button>
     </div>
 
     <div class="card">
