@@ -63,13 +63,14 @@ function showPlan() {
       </ul>
 
       <div class="overview-point">
-        <p class="overview-point-title">次にやること</p>
-        <ol>
-          <li>家にある食材が合っているか見る</li>
-          <li>買い足し候補を買うか決める</li>
-          <li>3日分の献立を確認する</li>
-        </ol>
-      </div>
+  <p class="overview-point-title">次にやること</p>
+  <ol>
+    <li>家にある食材を確認する</li>
+    <li>買い足しメモを確認する</li>
+    <li>買う前の確認メモで最終チェックする</li>
+    <li>3日分の献立を見る</li>
+  </ol>
+</div>
 
       <button class="next-action" onclick="scrollToShoppingCheck()">買い物前チェックへ進む</button>
     </div>
