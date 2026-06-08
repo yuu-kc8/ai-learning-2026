@@ -219,12 +219,14 @@ function markShoppingMemoDone() {
     shoppingMemoText.textContent = "買い足し候補を確認しました。必要なものだけ買いましょう。";
   }
 
-  if (shoppingMemoMessage) {
-    shoppingMemoMessage.innerHTML = `
-      <div class="check-message-title">✅ 買い足しメモ確認完了</div>
-      <p>買うものを増やしすぎないように確認できました。</p>
-    `;
-  }
+ if (shoppingMemoMessage) {
+  shoppingMemoMessage.innerHTML = `
+    <div class="check-message-title">✅ 買い足しメモ確認完了</div>
+    <p>買うものを増やしすぎないように確認できました。</p>
+    <button class="next-action" onclick="scrollToShoppingCheck()">買う前の確認メモへ進む</button>
+  `;
+}
+  
 
   if (shoppingMemoButton) {
     shoppingMemoButton.textContent = "確認済み";
