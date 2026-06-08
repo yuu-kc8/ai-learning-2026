@@ -75,13 +75,15 @@ function showPlan() {
       <button class="next-action" onclick="scrollToHomeFoods()">家にある食材へ進む</button>
     </div>
 
-   <div id="homeFoods" class="card">
-  <h2>家にある食材</h2>
-      <p>入力した食材はこちらです。</p>
-      <ul>
-        ${foodItems}
-      </ul>
-    </div>
+  <div id="homeFoods" class="card">
+  <h2>家にある食材 <span id="homeFoodsStatus" class="status-badge">食材確認OK</span></h2>
+  <p id="homeFoodsText">入力した食材はこちらです。</p>
+  <ul>
+    ${foodItems}
+  </ul>
+  <button id="homeFoodsButton" class="check-done" onclick="markHomeFoodsDone()">家にある食材を確認しました</button>
+  <p id="homeFoodsMessage" class="check-message"></p>
+</div>
 
     ${extraFoodCard}
 
@@ -217,6 +219,40 @@ function scrollToHomeFoods() {
   setTimeout(() => {
     homeFoods.classList.remove("highlight-card");
   }, 1500);
+}
+function markHomeFoodsDone() {
+  const homeFoods = document.getElementById("homeFoods");
+  const homeFoodsStatus = document.getElementById("homeFoodsStatus");
+  const homeFoodsText = document.getElementById("homeFoodsText");
+  const homeFoodsMessage = document.getElementById("homeFoodsMessage");
+  const homeFoodsButton = document.getElementById("homeFoodsButton");
+
+  if (homeFoods) {
+    homeFoods.classList.add("checked-card");
+  }
+
+  if (homeFoodsStatus) {
+    homeFoodsStatus.textContent = "確認済み";
+    homeFoodsStatus.classList.add("done-label");
+  }
+
+  if (homeFoodsText) {
+    homeFoodsText.textContent = "家にある食材を確認しました。次に買い足しメモを見ましょう。";
+  }
+
+  if (homeFoodsMessage) {
+    homeFoodsMessage.innerHTML = `
+      <div class="check-message-title">✅ 家にある食材の確認完了</div>
+      <p>入力した食材を確認できました。</p>
+      <button class="next-action" onclick="scrollToShoppingMemo()">買い足しメモへ進む</button>
+    `;
+  }
+
+  if (homeFoodsButton) {
+    homeFoodsButton.textContent = "確認済み";
+    homeFoodsButton.classList.add("checked");
+    homeFoodsButton.disabled = true;
+  }
 }
 function markShoppingMemoDone() {
   const shoppingMemo = document.getElementById("shoppingMemo");
