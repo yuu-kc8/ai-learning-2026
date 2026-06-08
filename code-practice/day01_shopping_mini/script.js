@@ -84,7 +84,7 @@ function showPlan() {
 
     ${extraFoodCard}
 
-    <div class="card shopping-card">
+    <div id="shoppingMemo" class="card shopping-card">
       <h2>買い足しメモ <span class="count-label">候補 ${shoppingItems.length}個</span> <span class="status-badge">買い足し確認OK</span></h2>
       <p>家にある食材に足すと使いやすい、仮の買い足し候補です。</p>
       <ul>
@@ -128,7 +128,7 @@ function showPlan() {
         <p class="shopping-note"><span class="shopping-note-label">買い物メモ：</span>野菜が足りるか確認</p>
       </div>
 
-      <div class="menu-day">
+           <div class="menu-day">
         <h3 class="menu-title">3日目</h3>
         <p class="menu-name"><span class="card-label">メニュー：</span>${mainFood}のスープ</p>
         <p class="used-food"><span class="card-label">使う食材：</span>${mainFood}</p>
@@ -137,6 +137,8 @@ function showPlan() {
         <p class="menu-description"><span class="description-label">説明：</span>残った${mainFood}を使って、あたたかいスープにします。</p>
         <p class="shopping-note"><span class="shopping-note-label">買い物メモ：</span>汁物に使う食材を確認</p>
       </div>
+
+      <button class="next-action" onclick="scrollToShoppingMemo()">買い足しメモを見直す</button>
     </div>
   `;
 }
@@ -175,6 +177,24 @@ function scrollToMealPlan() {
 
   setTimeout(() => {
     mealPlan.classList.remove("highlight-card");
+  }, 1500);
+}
+function scrollToShoppingMemo() {
+  const shoppingMemo = document.getElementById("shoppingMemo");
+
+  if (!shoppingMemo) {
+    return;
+  }
+
+  shoppingMemo.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  shoppingMemo.classList.add("highlight-card");
+
+  setTimeout(() => {
+    shoppingMemo.classList.remove("highlight-card");
   }, 1500);
 }
 function markShoppingCheckDone() {
