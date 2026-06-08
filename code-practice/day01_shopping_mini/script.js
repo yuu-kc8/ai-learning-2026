@@ -104,7 +104,7 @@ function showPlan() {
       <p id="shoppingCheckMessage" class="check-message"></p>
     </div>
 
-    <div class="card day-card">
+    <div id="mealPlan" class="card day-card">
       <h2>3日分の献立 <span class="status-badge">献立確認OK</span></h2>
       <p class="plan-summary">家にある食材を使って、3日分の献立を日ごとに確認できます。</p>
 
@@ -159,7 +159,24 @@ function scrollToShoppingCheck() {
     shoppingCheck.classList.remove("highlight-card");
   }, 1500);
 }
+function scrollToMealPlan() {
+  const mealPlan = document.getElementById("mealPlan");
 
+  if (!mealPlan) {
+    return;
+  }
+
+  mealPlan.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  mealPlan.classList.add("highlight-card");
+
+  setTimeout(() => {
+    mealPlan.classList.remove("highlight-card");
+  }, 1500);
+}
 function markShoppingCheckDone() {
   const checkCard = document.getElementById("shoppingCheck");
   const checkStatus = document.getElementById("shoppingCheckStatus");
@@ -186,10 +203,11 @@ function markShoppingCheckDone() {
   }
 
   if (checkMessage) {
-    checkMessage.innerHTML = `
-      <div class="check-message-title">✅ 買い物チェック完了</div>
-      <p>買い物リストを見て、必要なものだけ買いましょう。</p>
-    `;
+   checkMessage.innerHTML = `
+  <div class="check-message-title">✅ 買い物チェック完了</div>
+  <p>買い物リストを見て、必要なものだけ買いましょう。</p>
+  <button class="next-action" onclick="scrollToMealPlan()">3日分の献立を見る</button>
+`;
   }
 
   if (checkButton) {
