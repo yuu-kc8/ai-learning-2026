@@ -85,12 +85,14 @@ function showPlan() {
     ${extraFoodCard}
 
     <div id="shoppingMemo" class="card shopping-card">
-      <h2>買い足しメモ <span class="count-label">候補 ${shoppingItems.length}個</span> <span class="status-badge">買い足し確認OK</span></h2>
-      <p>家にある食材に足すと使いやすい、仮の買い足し候補です。</p>
-      <ul>
-        ${shoppingMessage}
-      </ul>
-    </div>
+  <h2>買い足しメモ <span class="count-label">候補 ${shoppingItems.length}個</span> <span id="shoppingMemoStatus" class="status-badge">買い足し確認OK</span></h2>
+  <p id="shoppingMemoText">家にある食材に足すと使いやすい、仮の買い足し候補です。</p>
+  <ul>
+    ${shoppingMessage}
+  </ul>
+  <button id="shoppingMemoButton" class="check-done" onclick="markShoppingMemoDone()">買い足しメモを確認しました</button>
+  <p id="shoppingMemoMessage" class="check-message"></p>
+</div>
 
     <div id="shoppingCheck" class="card info-card">
       <h2>買う前の確認メモ <span id="shoppingCheckStatus" class="status-badge">買い物確認OK</span></h2>
@@ -196,6 +198,39 @@ function scrollToShoppingMemo() {
   setTimeout(() => {
     shoppingMemo.classList.remove("highlight-card");
   }, 1500);
+}
+function markShoppingMemoDone() {
+  const shoppingMemo = document.getElementById("shoppingMemo");
+  const shoppingMemoStatus = document.getElementById("shoppingMemoStatus");
+  const shoppingMemoText = document.getElementById("shoppingMemoText");
+  const shoppingMemoMessage = document.getElementById("shoppingMemoMessage");
+  const shoppingMemoButton = document.getElementById("shoppingMemoButton");
+
+  if (shoppingMemo) {
+    shoppingMemo.classList.add("checked-card");
+  }
+
+  if (shoppingMemoStatus) {
+    shoppingMemoStatus.textContent = "確認済み";
+    shoppingMemoStatus.classList.add("done-label");
+  }
+
+  if (shoppingMemoText) {
+    shoppingMemoText.textContent = "買い足し候補を確認しました。必要なものだけ買いましょう。";
+  }
+
+  if (shoppingMemoMessage) {
+    shoppingMemoMessage.innerHTML = `
+      <div class="check-message-title">✅ 買い足しメモ確認完了</div>
+      <p>買うものを増やしすぎないように確認できました。</p>
+    `;
+  }
+
+  if (shoppingMemoButton) {
+    shoppingMemoButton.textContent = "確認済み";
+    shoppingMemoButton.classList.add("checked");
+    shoppingMemoButton.disabled = true;
+  }
 }
 function markShoppingCheckDone() {
   const checkCard = document.getElementById("shoppingCheck");
