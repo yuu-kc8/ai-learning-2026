@@ -56,11 +56,12 @@ function showPlan() {
 
       <p class="overview-status">このプランは入力された食材をもとに作成されています。</p>
 
-      <ul class="overview-list">
-        <li>入力した食材：${foods.length}個</li>
-        <li>買い足し候補：${shoppingItems.length}個</li>
-        <li>献立：3日分</li>
-      </ul>
+     <ul class="overview-list">
+  <li>入力した食材：${foods.length}個</li>
+  <li>買い足し候補：${shoppingItems.length}個</li>
+  <li>献立：3日分</li>
+  <li>確認ステップ：4つ</li>
+</ul>
 
       <div class="overview-point">
   <p class="overview-point-title">次にやること</p>
