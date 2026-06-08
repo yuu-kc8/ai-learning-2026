@@ -464,7 +464,6 @@ button:hover {
 }
 .checked-list li {
   color: #15803d;
-  font-weight: bold;
 }
 
 .checked-list li::marker {
