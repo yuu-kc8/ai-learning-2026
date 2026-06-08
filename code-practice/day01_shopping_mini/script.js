@@ -72,11 +72,11 @@ function showPlan() {
   </ol>
 </div>
 
-      <button class="next-action" onclick="scrollToShoppingMemo()">買い足しメモへ進む</button>
+      <button class="next-action" onclick="scrollToHomeFoods()">家にある食材へ進む</button>
     </div>
 
-    <div class="card">
-      <h2>家にある食材</h2>
+   <div id="homeFoods" class="card">
+  <h2>家にある食材</h2>
       <p>入力した食材はこちらです。</p>
       <ul>
         ${foodItems}
@@ -198,6 +198,24 @@ function scrollToShoppingMemo() {
 
   setTimeout(() => {
     shoppingMemo.classList.remove("highlight-card");
+  }, 1500);
+}
+function scrollToHomeFoods() {
+  const homeFoods = document.getElementById("homeFoods");
+
+  if (!homeFoods) {
+    return;
+  }
+
+  homeFoods.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  homeFoods.classList.add("highlight-card");
+
+  setTimeout(() => {
+    homeFoods.classList.remove("highlight-card");
   }, 1500);
 }
 function markShoppingMemoDone() {
