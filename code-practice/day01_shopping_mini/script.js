@@ -94,7 +94,7 @@ function showPlan() {
   <ul>
     ${shoppingMessage}
   </ul>
-  <button id="shoppingMemoButton" class="check-done" onclick="markShoppingMemoDone()">買い足しメモを確認しました</button>
+  <button id="shoppingMemoButton" class="check-done" onclick="markShoppingMemoDone()">買い足しを確認しました</button>
   <p id="shoppingMemoMessage" class="check-message"></p>
 </div>
 
