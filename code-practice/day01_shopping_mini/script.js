@@ -106,7 +106,7 @@ function showPlan() {
         <li>足りない食材だけを買い足す</li>
         <li>買いすぎないように確認する</li>
       </ul>
-      <button id="shoppingCheckButton" class="check-done" onclick="markShoppingCheckDone()">確認しました</button>
+      <button id="shoppingCheckButton" class="check-done" onclick="markShoppingCheckDone()">最終チェックしました</button>
       <p id="shoppingCheckMessage" class="check-message"></p>
     </div>
 
