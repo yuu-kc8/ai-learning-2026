@@ -99,7 +99,7 @@ function showPlan() {
 </div>
 
     <div id="shoppingCheck" class="card info-card">
-      <h2>買う前の確認メモ <span id="shoppingCheckStatus" class="status-badge">買い物確認OK</span></h2>
+      <h2>買う前の確認メモ<span id="shoppingCheckStatus" class="status-badge">最終チェックOK</span>
       <p id="shoppingCheckText">家にある食材を先に使ってから、必要なものを買い足しましょう。</p>
       <ul id="shoppingCheckList" class="check-list">
         <li>家にある食材を先に使う</li>
