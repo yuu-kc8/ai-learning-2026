@@ -279,7 +279,7 @@ function markShoppingMemoDone() {
   shoppingMemoMessage.innerHTML = `
     <div class="check-message-title">✅ 買い足しメモ確認完了</div>
     <p>買うものを増やしすぎないように確認できました。</p>
-    <button class="next-action" onclick="scrollToShoppingCheck()">買う前の確認メモへ進む</button>
+    <button class="next-action" onclick="scrollToShoppingCheck()">買う前の最終チェックへ進む</button>
   `;
 }
   
