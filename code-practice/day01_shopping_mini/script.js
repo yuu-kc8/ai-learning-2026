@@ -50,7 +50,7 @@ function showPlan() {
       `;
 
   result.innerHTML = `
-    <div class="card plan-overview">
+    <div id="planOverview" class="card plan-overview">
       <h2>今回のプランまとめ <span class="status-badge">プラン作成完了</span></h2>
       <p>家にある食材・買い足し候補・3日分の献立をまとめて確認できます。</p>
 
@@ -223,6 +223,24 @@ function scrollToHomeFoods() {
     homeFoods.classList.remove("highlight-card");
   }, 1500);
 }
+function scrollToPlanOverview() {
+  const planOverview = document.getElementById("planOverview");
+
+  if (!planOverview) {
+    return;
+  }
+
+  planOverview.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  planOverview.classList.add("highlight-card");
+
+  setTimeout(() => {
+    planOverview.classList.remove("highlight-card");
+  }, 1500);
+}
 function markHomeFoodsDone() {
   const homeFoods = document.getElementById("homeFoods");
   const homeFoodsStatus = document.getElementById("homeFoodsStatus");
@@ -273,11 +291,12 @@ function markMealPlanDone() {
   }
 
   if (mealPlanMessage) {
-    mealPlanMessage.innerHTML = `
-      <div class="check-message-title">✅ 献立確認完了</div>
-      <p>3日分の献立を確認できました。</p>
-    `;
-  }
+  mealPlanMessage.innerHTML = `
+    <div class="check-message-title">✅ 献立確認完了</div>
+    <p>3日分の献立を確認できました。</p>
+    <button class="next-action" onclick="scrollToPlanOverview()">今回のプランまとめへ戻る</button>
+  `;
+}
 
   if (mealPlanButton) {
     mealPlanButton.textContent = "確認済み";
