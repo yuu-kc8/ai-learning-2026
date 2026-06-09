@@ -82,7 +82,7 @@ function showPlan() {
   <ul>
     ${foodItems}
   </ul>
-  <button id="homeFoodsButton" class="check-done" onclick="markHomeFoodsDone()">家にある食材を確認しました</button>
+  <button id="homeFoodsButton" class="check-done" onclick="markHomeFoodsDone()">食材を確認しました</button>
   <p id="homeFoodsMessage" class="check-message"></p>
 </div>
 
