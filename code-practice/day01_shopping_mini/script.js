@@ -60,11 +60,11 @@ function showPlan() {
   <li>入力した食材：${foods.length}個</li>
   <li>買い足し候補：${shoppingItems.length}個</li>
   <li>献立：3日分</li>
-  <li>確認ステップ：4つ</li>
+  <li>確認の流れ：4ステップ</li>
 </ul>
 
       <div class="overview-point">
-  <p class="overview-point-title">次にやること</p>
+  <p class="overview-point-title">確認する順番</p>
   <ol>
     <li>家にある食材を確認する</li>
     <li>買い足しメモを確認する</li>
