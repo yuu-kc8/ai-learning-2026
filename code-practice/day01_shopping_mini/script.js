@@ -51,10 +51,10 @@ function showPlan() {
 
   result.innerHTML = `
     <div id="planOverview" class="card plan-overview">
-      <h2>今回のプランまとめ <span class="status-badge">プラン作成完了</span></h2>
+      <h2>今回のプランまとめ <span id="planOverviewStatus" class="status-badge">プラン作成完了</span></h2>
       <p>家にある食材・買い足し候補・3日分の献立をまとめて確認できます。</p>
 
-      <p class="overview-status">このプランは入力された食材をもとに作成されています。</p>
+      <p id="planOverviewText" class="overview-status">このプランは入力された食材をもとに作成されています。</p>
 
      <ul class="overview-list">
   <li>入力した食材：${foods.length}個</li>
@@ -275,7 +275,6 @@ function markHomeFoodsDone() {
     homeFoodsButton.disabled = true;
   }
 }
-function markMealPlanDone() {
   const mealPlan = document.getElementById("mealPlan");
   const mealPlanStatus = document.getElementById("mealPlanStatus");
   const mealPlanMessage = document.getElementById("mealPlanMessage");
@@ -303,78 +302,49 @@ function markMealPlanDone() {
     mealPlanButton.classList.add("checked");
     mealPlanButton.disabled = true;
   }
-}
-function markShoppingMemoDone() {
-  const shoppingMemo = document.getElementById("shoppingMemo");
-  const shoppingMemoStatus = document.getElementById("shoppingMemoStatus");
-  const shoppingMemoText = document.getElementById("shoppingMemoText");
-  const shoppingMemoMessage = document.getElementById("shoppingMemoMessage");
-  const shoppingMemoButton = document.getElementById("shoppingMemoButton");
+function markMealPlanDone() {
+  const planOverview = document.getElementById("planOverview");
+  const planOverviewStatus = document.getElementById("planOverviewStatus");
+  const planOverviewText = document.getElementById("planOverviewText");
 
-  if (shoppingMemo) {
-    shoppingMemo.classList.add("checked-card");
+  const mealPlan = document.getElementById("mealPlan");
+  const mealPlanStatus = document.getElementById("mealPlanStatus");
+  const mealPlanMessage = document.getElementById("mealPlanMessage");
+  const mealPlanButton = document.getElementById("mealPlanButton");
+
+  if (mealPlan) {
+    mealPlan.classList.add("checked-card");
   }
 
-  if (shoppingMemoStatus) {
-    shoppingMemoStatus.textContent = "確認済み";
-    shoppingMemoStatus.classList.add("done-label");
+  if (mealPlanStatus) {
+    mealPlanStatus.textContent = "確認済み";
+    mealPlanStatus.classList.add("done-label");
   }
 
-  if (shoppingMemoText) {
-    shoppingMemoText.textContent = "買い足し候補を確認しました。必要なものだけ買いましょう。";
+  if (mealPlanMessage) {
+    mealPlanMessage.innerHTML = `
+      <div class="check-message-title">✅ 献立確認完了</div>
+      <p>3日分の献立を確認できました。</p>
+      <button class="next-action" onclick="scrollToPlanOverview()">今回のプランまとめへ戻る</button>
+    `;
   }
 
- if (shoppingMemoMessage) {
-  shoppingMemoMessage.innerHTML = `
-    <div class="check-message-title">✅ 買い足しメモ確認完了</div>
-    <p>買うものを増やしすぎないように確認できました。</p>
-    <button class="next-action" onclick="scrollToShoppingCheck()">買う前の最終チェックへ進む</button>
-  `;
-}
-  
-
-  if (shoppingMemoButton) {
-    shoppingMemoButton.textContent = "確認済み";
-    shoppingMemoButton.classList.add("checked");
-    shoppingMemoButton.disabled = true;
-  }
-}
-function markShoppingCheckDone() {
-  const checkCard = document.getElementById("shoppingCheck");
-  const checkStatus = document.getElementById("shoppingCheckStatus");
-  const checkText = document.getElementById("shoppingCheckText");
-  const checkList = document.getElementById("shoppingCheckList");
-  const checkMessage = document.getElementById("shoppingCheckMessage");
-  const checkButton = document.getElementById("shoppingCheckButton");
-
-  if (checkCard) {
-    checkCard.classList.add("checked-card");
+  if (mealPlanButton) {
+    mealPlanButton.textContent = "確認済み";
+    mealPlanButton.classList.add("checked");
+    mealPlanButton.disabled = true;
   }
 
-  if (checkStatus) {
-    checkStatus.textContent = "確認完了";
-    checkStatus.classList.add("done-label");
+  if (planOverview) {
+    planOverview.classList.add("checked-card");
   }
 
-  if (checkText) {
-    checkText.textContent = "買い物前チェックは完了しました。必要なものだけを買いましょう。";
+  if (planOverviewStatus) {
+    planOverviewStatus.textContent = "確認完了";
+    planOverviewStatus.classList.add("done-label");
   }
 
-  if (checkList) {
-    checkList.classList.add("checked-list");
-  }
-
-  if (checkMessage) {
-   checkMessage.innerHTML = `
-  <div class="check-message-title">✅ 買い物チェック完了</div>
-  <p>買い物リストを見て、必要なものだけ買いましょう。</p>
-  <button class="next-action" onclick="scrollToMealPlan()">3日分の献立を見る</button>
-`;
-  }
-
-  if (checkButton) {
-    checkButton.textContent = "確認済み";
-    checkButton.classList.add("checked");
-    checkButton.disabled = true;
+  if (planOverviewText) {
+    planOverviewText.textContent = "4つの確認ステップが完了しました。買い物に進める状態です。";
   }
 }
