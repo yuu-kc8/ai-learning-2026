@@ -21,7 +21,7 @@ function showPlan() {
     result.innerHTML = `
       <div class="card error-card">
         <h2>入力エラー</h2>
-        <p>食材を1つ以上入力してください。例：鶏肉、豆腐、キャベツ</p>
+        <p>食材を1つ以上入力してください。</p>
       </div>
     `;
     return;
@@ -56,47 +56,47 @@ function showPlan() {
 
       <p id="planOverviewText" class="overview-status">このプランは入力された食材をもとに作成されています。</p>
 
-     <ul class="overview-list">
-  <li>入力した食材：${foods.length}個</li>
-  <li>買い足し候補：${shoppingItems.length}個</li>
-  <li>献立：3日分</li>
-  <li>確認の流れ：4ステップ</li>
-</ul>
+      <ul class="overview-list">
+        <li>入力した食材：${foods.length}個</li>
+        <li>買い足し候補：${shoppingItems.length}個</li>
+        <li>献立：3日分</li>
+        <li>確認の流れ：4ステップ</li>
+      </ul>
 
       <div class="overview-point">
-  <p class="overview-point-title">確認する順番</p>
-  <ol>
-    <li>家にある食材を確認する</li>
-    <li>買い足しメモを確認する</li>
-    <li>買う前の最終チェックをする</li>
-    <li>3日分の献立を見る</li>
-  </ol>
-</div>
+        <p class="overview-point-title">確認する順番</p>
+        <ol>
+          <li>家にある食材を確認する</li>
+          <li>買い足しメモを確認する</li>
+          <li>買う前の最終チェックをする</li>
+          <li>3日分の献立を見る</li>
+        </ol>
+      </div>
 
       <button class="next-action" onclick="scrollToHomeFoods()">家にある食材へ進む</button>
     </div>
 
-  <div id="homeFoods" class="card">
-  <h2>家にある食材 <span id="homeFoodsStatus" class="status-badge">食材確認OK</span></h2>
-  <p id="homeFoodsText">入力した食材はこちらです。</p>
-  <ul>
-    ${foodItems}
-  </ul>
-  <button id="homeFoodsButton" class="check-done" onclick="markHomeFoodsDone()">食材を確認しました</button>
-  <p id="homeFoodsMessage" class="check-message"></p>
-</div>
+    <div id="homeFoods" class="card">
+      <h2>家にある食材 <span id="homeFoodsStatus" class="status-badge">食材確認OK</span></h2>
+      <p id="homeFoodsText">入力した食材はこちらです。</p>
+      <ul>
+        ${foodItems}
+      </ul>
+      <button id="homeFoodsButton" class="check-done" onclick="markHomeFoodsDone()">食材を確認しました</button>
+      <p id="homeFoodsMessage" class="check-message"></p>
+    </div>
 
     ${extraFoodCard}
 
     <div id="shoppingMemo" class="card shopping-card">
-  <h2>買い足しメモ <span class="count-label">候補 ${shoppingItems.length}個</span> <span id="shoppingMemoStatus" class="status-badge">買い足し確認OK</span></h2>
-  <p id="shoppingMemoText">家にある食材に足すと使いやすい、仮の買い足し候補です。</p>
-  <ul>
-    ${shoppingMessage}
-  </ul>
-  <button id="shoppingMemoButton" class="check-done" onclick="markShoppingMemoDone()">買い足しを確認しました</button>
-  <p id="shoppingMemoMessage" class="check-message"></p>
-</div>
+      <h2>買い足しメモ <span class="count-label">候補 ${shoppingItems.length}個</span> <span id="shoppingMemoStatus" class="status-badge">買い足し確認OK</span></h2>
+      <p id="shoppingMemoText">家にある食材に足すと使いやすい、仮の買い足し候補です。</p>
+      <ul>
+        ${shoppingMessage}
+      </ul>
+      <button id="shoppingMemoButton" class="check-done" onclick="markShoppingMemoDone()">買い足しを確認しました</button>
+      <p id="shoppingMemoMessage" class="check-message"></p>
+    </div>
 
     <div id="shoppingCheck" class="card info-card">
       <h2>買う前の最終チェック <span id="shoppingCheckStatus" class="status-badge">最終チェックOK</span></h2>
@@ -111,7 +111,7 @@ function showPlan() {
     </div>
 
     <div id="mealPlan" class="card day-card">
-  <h2>3日分の献立 <span id="mealPlanStatus" class="status-badge">献立確認OK</span></h2>
+      <h2>3日分の献立 <span id="mealPlanStatus" class="status-badge">献立確認OK</span></h2>
       <p class="plan-summary">家にある食材を使って、3日分の献立を日ごとに確認できます。</p>
 
       <div class="menu-day">
@@ -134,7 +134,7 @@ function showPlan() {
         <p class="shopping-note"><span class="shopping-note-label">買い物メモ：</span>野菜が足りるか確認</p>
       </div>
 
-           <div class="menu-day">
+      <div class="menu-day">
         <h3 class="menu-title">3日目</h3>
         <p class="menu-name"><span class="card-label">メニュー：</span>${mainFood}のスープ</p>
         <p class="used-food"><span class="card-label">使う食材：</span>${mainFood}</p>
@@ -145,10 +145,48 @@ function showPlan() {
       </div>
 
       <button id="mealPlanButton" class="check-done" onclick="markMealPlanDone()">献立を確認しました</button>
-<p id="mealPlanMessage" class="check-message"></p>
-<button class="next-action" onclick="scrollToShoppingMemo()">買い足しメモを見直す</button>
+      <p id="mealPlanMessage" class="check-message"></p>
+      <button class="next-action" onclick="scrollToShoppingMemo()">買い足しメモを見直す</button>
     </div>
   `;
+}
+
+function scrollToHomeFoods() {
+  const homeFoods = document.getElementById("homeFoods");
+
+  if (!homeFoods) {
+    return;
+  }
+
+  homeFoods.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  homeFoods.classList.add("highlight-card");
+
+  setTimeout(() => {
+    homeFoods.classList.remove("highlight-card");
+  }, 1500);
+}
+
+function scrollToShoppingMemo() {
+  const shoppingMemo = document.getElementById("shoppingMemo");
+
+  if (!shoppingMemo) {
+    return;
+  }
+
+  shoppingMemo.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  shoppingMemo.classList.add("highlight-card");
+
+  setTimeout(() => {
+    shoppingMemo.classList.remove("highlight-card");
+  }, 1500);
 }
 
 function scrollToShoppingCheck() {
@@ -169,6 +207,7 @@ function scrollToShoppingCheck() {
     shoppingCheck.classList.remove("highlight-card");
   }, 1500);
 }
+
 function scrollToMealPlan() {
   const mealPlan = document.getElementById("mealPlan");
 
@@ -187,42 +226,7 @@ function scrollToMealPlan() {
     mealPlan.classList.remove("highlight-card");
   }, 1500);
 }
-function scrollToShoppingMemo() {
-  const shoppingMemo = document.getElementById("shoppingMemo");
 
-  if (!shoppingMemo) {
-    return;
-  }
-
-  shoppingMemo.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-
-  shoppingMemo.classList.add("highlight-card");
-
-  setTimeout(() => {
-    shoppingMemo.classList.remove("highlight-card");
-  }, 1500);
-}
-function scrollToHomeFoods() {
-  const homeFoods = document.getElementById("homeFoods");
-
-  if (!homeFoods) {
-    return;
-  }
-
-  homeFoods.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-
-  homeFoods.classList.add("highlight-card");
-
-  setTimeout(() => {
-    homeFoods.classList.remove("highlight-card");
-  }, 1500);
-}
 function scrollToPlanOverview() {
   const planOverview = document.getElementById("planOverview");
 
@@ -241,6 +245,7 @@ function scrollToPlanOverview() {
     planOverview.classList.remove("highlight-card");
   }, 1500);
 }
+
 function markHomeFoodsDone() {
   const homeFoods = document.getElementById("homeFoods");
   const homeFoodsStatus = document.getElementById("homeFoodsStatus");
@@ -275,33 +280,82 @@ function markHomeFoodsDone() {
     homeFoodsButton.disabled = true;
   }
 }
-  const mealPlan = document.getElementById("mealPlan");
-  const mealPlanStatus = document.getElementById("mealPlanStatus");
-  const mealPlanMessage = document.getElementById("mealPlanMessage");
-  const mealPlanButton = document.getElementById("mealPlanButton");
 
-  if (mealPlan) {
-    mealPlan.classList.add("checked-card");
+function markShoppingMemoDone() {
+  const shoppingMemo = document.getElementById("shoppingMemo");
+  const shoppingMemoStatus = document.getElementById("shoppingMemoStatus");
+  const shoppingMemoText = document.getElementById("shoppingMemoText");
+  const shoppingMemoMessage = document.getElementById("shoppingMemoMessage");
+  const shoppingMemoButton = document.getElementById("shoppingMemoButton");
+
+  if (shoppingMemo) {
+    shoppingMemo.classList.add("checked-card");
   }
 
-  if (mealPlanStatus) {
-    mealPlanStatus.textContent = "確認済み";
-    mealPlanStatus.classList.add("done-label");
+  if (shoppingMemoStatus) {
+    shoppingMemoStatus.textContent = "確認済み";
+    shoppingMemoStatus.classList.add("done-label");
   }
 
-  if (mealPlanMessage) {
-  mealPlanMessage.innerHTML = `
-    <div class="check-message-title">✅ 献立確認完了</div>
-    <p>3日分の献立を確認できました。</p>
-    <button class="next-action" onclick="scrollToPlanOverview()">今回のプランまとめへ戻る</button>
-  `;
+  if (shoppingMemoText) {
+    shoppingMemoText.textContent = "買い足し候補を確認しました。必要なものだけ買いましょう。";
+  }
+
+  if (shoppingMemoMessage) {
+    shoppingMemoMessage.innerHTML = `
+      <div class="check-message-title">✅ 買い足しメモ確認完了</div>
+      <p>買うものを増やしすぎないように確認できました。</p>
+      <button class="next-action" onclick="scrollToShoppingCheck()">買う前の最終チェックへ進む</button>
+    `;
+  }
+
+  if (shoppingMemoButton) {
+    shoppingMemoButton.textContent = "確認済み";
+    shoppingMemoButton.classList.add("checked");
+    shoppingMemoButton.disabled = true;
+  }
 }
 
-  if (mealPlanButton) {
-    mealPlanButton.textContent = "確認済み";
-    mealPlanButton.classList.add("checked");
-    mealPlanButton.disabled = true;
+function markShoppingCheckDone() {
+  const checkCard = document.getElementById("shoppingCheck");
+  const checkStatus = document.getElementById("shoppingCheckStatus");
+  const checkText = document.getElementById("shoppingCheckText");
+  const checkList = document.getElementById("shoppingCheckList");
+  const checkMessage = document.getElementById("shoppingCheckMessage");
+  const checkButton = document.getElementById("shoppingCheckButton");
+
+  if (checkCard) {
+    checkCard.classList.add("checked-card");
   }
+
+  if (checkStatus) {
+    checkStatus.textContent = "確認完了";
+    checkStatus.classList.add("done-label");
+  }
+
+  if (checkText) {
+    checkText.textContent = "買い物前チェックは完了しました。必要なものだけを買いましょう。";
+  }
+
+  if (checkList) {
+    checkList.classList.add("checked-list");
+  }
+
+  if (checkMessage) {
+    checkMessage.innerHTML = `
+      <div class="check-message-title">✅ 買い物チェック完了</div>
+      <p>買い物リストを見て、必要なものだけ買いましょう。</p>
+      <button class="next-action" onclick="scrollToMealPlan()">3日分の献立を見る</button>
+    `;
+  }
+
+  if (checkButton) {
+    checkButton.textContent = "確認済み";
+    checkButton.classList.add("checked");
+    checkButton.disabled = true;
+  }
+}
+
 function markMealPlanDone() {
   const planOverview = document.getElementById("planOverview");
   const planOverviewStatus = document.getElementById("planOverviewStatus");
