@@ -76,7 +76,7 @@ function showPlan() {
       <button class="next-action" onclick="scrollToHomeFoods()">家にある食材へ進む</button>
     </div>
 
-    <div id="homeFoods" class="card">
+    <div id="homeFoods" class="card home-card">
       <h2>家にある食材 <span id="homeFoodsStatus" class="status-badge">食材確認OK</span></h2>
       <p id="homeFoodsText">入力した食材はこちらです。</p>
       <ul>
