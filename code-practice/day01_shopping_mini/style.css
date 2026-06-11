@@ -409,6 +409,10 @@ button:hover {
   border: 1px solid #bbf7d0;
 }
 
+.check-message:empty {
+  display: none;
+}
+
 .check-message p {
   margin: 6px 0 0;
   font-size: 13px;
