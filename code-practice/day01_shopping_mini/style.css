@@ -452,6 +452,11 @@ button:hover {
   background-color: #dcfce7;
   border: 1px solid #86efac;
 }
+.status-badge.checking-label {
+  color: #1d4ed8;
+  background-color: #dbeafe;
+  border: 1px solid #93c5fd;
+}
 .checked-list li {
   color: #15803d;
 }
