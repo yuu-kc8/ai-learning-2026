@@ -74,6 +74,7 @@ function showPlan() {
       </div>
 
       <button id="planOverviewButton" class="next-action" onclick="scrollToHomeFoods()">家にある食材へ進む</button>
+<p id="planOverviewActionText" class="check-message"></p>
     </div>
 
     <div id="homeFoods" class="card home-card">
@@ -361,6 +362,7 @@ function markMealPlanDone() {
 const planOverviewStatus = document.getElementById("planOverviewStatus");
 const planOverviewText = document.getElementById("planOverviewText");
 const planOverviewButton = document.getElementById("planOverviewButton");
+const planOverviewActionText = document.getElementById("planOverviewActionText");
 
   const mealPlan = document.getElementById("mealPlan");
   const mealPlanStatus = document.getElementById("mealPlanStatus");
@@ -405,5 +407,9 @@ const planOverviewButton = document.getElementById("planOverviewButton");
 
 if (planOverviewButton) {
   planOverviewButton.textContent = "もう一度確認する";
+}
+
+if (planOverviewActionText) {
+  planOverviewActionText.textContent = "もう一度確認する場合は、家にある食材から見直せます。";
 }
 }
