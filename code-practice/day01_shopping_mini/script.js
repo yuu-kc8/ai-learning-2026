@@ -66,10 +66,10 @@ function showPlan() {
       <div class="overview-point">
         <p class="overview-point-title">確認する順番</p>
         <ol>
-          <li>家にある食材を確認する</li>
-          <li>買い足しメモを確認する</li>
-          <li>買う前の最終チェックをする</li>
-          <li>3日分の献立を見る</li>
+         <li id="overviewHomeStep">家にある食材を確認する</li>
+<li id="overviewMemoStep">買い足しメモを確認する</li>
+<li id="overviewCheckStep">買う前の最終チェックをする</li>
+<li id="overviewMealStep">3日分の献立を見る</li>
         </ol>
       </div>
 
@@ -255,9 +255,14 @@ function updatePlanOverviewDone() {
   const planOverviewStepText = document.getElementById("planOverviewStepText");
 
   const homeFoodsButton = document.getElementById("homeFoodsButton");
-  const shoppingMemoButton = document.getElementById("shoppingMemoButton");
-  const shoppingCheckButton = document.getElementById("shoppingCheckButton");
-  const mealPlanButton = document.getElementById("mealPlanButton");
+const shoppingMemoButton = document.getElementById("shoppingMemoButton");
+const shoppingCheckButton = document.getElementById("shoppingCheckButton");
+const mealPlanButton = document.getElementById("mealPlanButton");
+
+const overviewHomeStep = document.getElementById("overviewHomeStep");
+const overviewMemoStep = document.getElementById("overviewMemoStep");
+const overviewCheckStep = document.getElementById("overviewCheckStep");
+const overviewMealStep = document.getElementById("overviewMealStep");
 
   if (!homeFoodsButton || !shoppingMemoButton || !shoppingCheckButton || !mealPlanButton) {
     return;
@@ -270,7 +275,27 @@ function updatePlanOverviewDone() {
     mealPlanButton
   ].filter((button) => button.disabled);
 
-  const checkedCount = checkedButtons.length;
+ const checkedCount = checkedButtons.length;
+
+if (homeFoodsButton.disabled && overviewHomeStep) {
+  overviewHomeStep.textContent = "✅ 家にある食材を確認済み";
+  overviewHomeStep.classList.add("overview-step-done");
+}
+
+if (shoppingMemoButton.disabled && overviewMemoStep) {
+  overviewMemoStep.textContent = "✅ 買い足しメモを確認済み";
+  overviewMemoStep.classList.add("overview-step-done");
+}
+
+if (shoppingCheckButton.disabled && overviewCheckStep) {
+  overviewCheckStep.textContent = "✅ 買う前の最終チェック済み";
+  overviewCheckStep.classList.add("overview-step-done");
+}
+
+if (mealPlanButton.disabled && overviewMealStep) {
+  overviewMealStep.textContent = "✅ 3日分の献立を確認済み";
+  overviewMealStep.classList.add("overview-step-done");
+}
 
  if (planOverviewStepText) {
   planOverviewStepText.textContent = `確認中：${checkedCount}/4ステップ`;
