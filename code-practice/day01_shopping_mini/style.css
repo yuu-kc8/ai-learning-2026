@@ -478,3 +478,7 @@ button:hover {
     padding: 18px;
   }
 }
+.overview-step-done {
+  color: #15803d;
+  font-weight: bold;
+}
