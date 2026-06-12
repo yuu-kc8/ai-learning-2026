@@ -263,11 +263,20 @@ function updatePlanOverviewDone() {
     return;
   }
 
-  const allChecked =
-    homeFoodsButton.disabled &&
-    shoppingMemoButton.disabled &&
-    shoppingCheckButton.disabled &&
-    mealPlanButton.disabled;
+  const checkedButtons = [
+    homeFoodsButton,
+    shoppingMemoButton,
+    shoppingCheckButton,
+    mealPlanButton
+  ].filter((button) => button.disabled);
+
+  const checkedCount = checkedButtons.length;
+
+  if (planOverviewStepText) {
+    planOverviewStepText.textContent = `確認中：${checkedCount}/4ステップ`;
+  }
+
+  const allChecked = checkedCount === 4;
 
   if (!allChecked) {
     return;
@@ -298,6 +307,7 @@ function updatePlanOverviewDone() {
     planOverviewStepText.textContent = "確認済み：4ステップ";
   }
 }
+
 
 function markHomeFoodsDone() {
   const homeFoods = document.getElementById("homeFoods");
