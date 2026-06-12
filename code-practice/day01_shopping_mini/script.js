@@ -246,6 +246,58 @@ function scrollToPlanOverview() {
     planOverview.classList.remove("highlight-card");
   }, 1500);
 }
+function updatePlanOverviewDone() {
+  const planOverview = document.getElementById("planOverview");
+  const planOverviewStatus = document.getElementById("planOverviewStatus");
+  const planOverviewText = document.getElementById("planOverviewText");
+  const planOverviewButton = document.getElementById("planOverviewButton");
+  const planOverviewActionText = document.getElementById("planOverviewActionText");
+  const planOverviewStepText = document.getElementById("planOverviewStepText");
+
+  const homeFoodsButton = document.getElementById("homeFoodsButton");
+  const shoppingMemoButton = document.getElementById("shoppingMemoButton");
+  const shoppingCheckButton = document.getElementById("shoppingCheckButton");
+  const mealPlanButton = document.getElementById("mealPlanButton");
+
+  if (!homeFoodsButton || !shoppingMemoButton || !shoppingCheckButton || !mealPlanButton) {
+    return;
+  }
+
+  const allChecked =
+    homeFoodsButton.disabled &&
+    shoppingMemoButton.disabled &&
+    shoppingCheckButton.disabled &&
+    mealPlanButton.disabled;
+
+  if (!allChecked) {
+    return;
+  }
+
+  if (planOverview) {
+    planOverview.classList.add("checked-card");
+  }
+
+  if (planOverviewStatus) {
+    planOverviewStatus.textContent = "確認完了";
+    planOverviewStatus.classList.add("done-label");
+  }
+
+  if (planOverviewText) {
+    planOverviewText.textContent = "4つの確認ステップが完了しました。買い物に進める状態です。";
+  }
+
+  if (planOverviewButton) {
+    planOverviewButton.textContent = "もう一度確認する";
+  }
+
+  if (planOverviewActionText) {
+    planOverviewActionText.textContent = "もう一度確認する場合は、家にある食材から見直せます。";
+  }
+
+  if (planOverviewStepText) {
+    planOverviewStepText.textContent = "確認済み：4ステップ";
+  }
+}
 
 function markHomeFoodsDone() {
   const homeFoods = document.getElementById("homeFoods");
@@ -276,10 +328,12 @@ function markHomeFoodsDone() {
   }
 
   if (homeFoodsButton) {
-    homeFoodsButton.textContent = "確認済み";
-    homeFoodsButton.classList.add("checked");
-    homeFoodsButton.disabled = true;
-  }
+  homeFoodsButton.textContent = "確認済み";
+  homeFoodsButton.classList.add("checked");
+  homeFoodsButton.disabled = true;
+}
+
+updatePlanOverviewDone();
 }
 
 function markShoppingMemoDone() {
@@ -310,11 +364,13 @@ function markShoppingMemoDone() {
     `;
   }
 
-  if (shoppingMemoButton) {
-    shoppingMemoButton.textContent = "確認済み";
-    shoppingMemoButton.classList.add("checked");
-    shoppingMemoButton.disabled = true;
-  }
+ if (shoppingMemoButton) {
+  shoppingMemoButton.textContent = "確認済み";
+  shoppingMemoButton.classList.add("checked");
+  shoppingMemoButton.disabled = true;
+}
+
+updatePlanOverviewDone();
 }
 
 function markShoppingCheckDone() {
@@ -350,21 +406,17 @@ function markShoppingCheckDone() {
     `;
   }
 
-  if (checkButton) {
-    checkButton.textContent = "確認済み";
-    checkButton.classList.add("checked");
-    checkButton.disabled = true;
-  }
+ if (checkButton) {
+  checkButton.textContent = "確認済み";
+  checkButton.classList.add("checked");
+  checkButton.disabled = true;
 }
 
-function markMealPlanDone() {
- const planOverview = document.getElementById("planOverview");
-const planOverviewStatus = document.getElementById("planOverviewStatus");
-const planOverviewText = document.getElementById("planOverviewText");
-const planOverviewButton = document.getElementById("planOverviewButton");
-const planOverviewActionText = document.getElementById("planOverviewActionText");
-const planOverviewStepText = document.getElementById("planOverviewStepText");
+updatePlanOverviewDone();
+  }
 
+
+function markMealPlanDone() {
   const mealPlan = document.getElementById("mealPlan");
   const mealPlanStatus = document.getElementById("mealPlanStatus");
   const mealPlanMessage = document.getElementById("mealPlanMessage");
@@ -393,28 +445,5 @@ const planOverviewStepText = document.getElementById("planOverviewStepText");
     mealPlanButton.disabled = true;
   }
 
-  if (planOverview) {
-    planOverview.classList.add("checked-card");
-  }
-
-  if (planOverviewStatus) {
-    planOverviewStatus.textContent = "確認完了";
-    planOverviewStatus.classList.add("done-label");
-  }
-
-  if (planOverviewText) {
-  planOverviewText.textContent = "4つの確認ステップが完了しました。買い物に進める状態です。";
-}
-
-if (planOverviewButton) {
-  planOverviewButton.textContent = "もう一度確認する";
-}
-
-if (planOverviewActionText) {
-  planOverviewActionText.textContent = "もう一度確認する場合は、家にある食材から見直せます。";
-}
-
-if (planOverviewStepText) {
-  planOverviewStepText.textContent = "確認済み：4ステップ";
-}
+  updatePlanOverviewDone();
 }
