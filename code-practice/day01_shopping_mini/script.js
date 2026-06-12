@@ -272,15 +272,19 @@ function updatePlanOverviewDone() {
 
   const checkedCount = checkedButtons.length;
 
-  if (planOverviewStepText) {
-    planOverviewStepText.textContent = `確認中：${checkedCount}/4ステップ`;
-  }
+ if (planOverviewStepText) {
+  planOverviewStepText.textContent = `確認中：${checkedCount}/4ステップ`;
+}
 
-  const allChecked = checkedCount === 4;
+if (checkedCount > 0 && planOverviewStatus) {
+  planOverviewStatus.textContent = "確認中";
+}
 
-  if (!allChecked) {
-    return;
-  }
+const allChecked = checkedCount === 4;
+
+if (!allChecked) {
+  return;
+}
 
   if (planOverview) {
     planOverview.classList.add("checked-card");
