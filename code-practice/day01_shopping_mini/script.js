@@ -278,6 +278,8 @@ function updatePlanOverviewDone() {
 
 if (checkedCount > 0 && planOverviewStatus) {
   planOverviewStatus.textContent = "確認中";
+  planOverviewStatus.classList.add("checking-label");
+  planOverviewStatus.classList.remove("done-label");
 }
 
 const allChecked = checkedCount === 4;
@@ -291,10 +293,10 @@ if (!allChecked) {
   }
 
   if (planOverviewStatus) {
-    planOverviewStatus.textContent = "確認完了";
-    planOverviewStatus.classList.add("done-label");
-  }
-
+  planOverviewStatus.textContent = "確認完了";
+  planOverviewStatus.classList.remove("checking-label");
+  planOverviewStatus.classList.add("done-label");
+}
   if (planOverviewText) {
     planOverviewText.textContent = "4つの確認ステップが完了しました。買い物に進める状態です。";
   }
