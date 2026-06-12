@@ -60,7 +60,7 @@ function showPlan() {
         <li>入力した食材：${foods.length}個</li>
         <li>買い足し候補：${shoppingItems.length}個</li>
         <li>献立：3日分</li>
-        <li>確認の流れ：4ステップ</li>
+        <li id="planOverviewStepText">確認の流れ：4ステップ</li>
       </ul>
 
       <div class="overview-point">
@@ -363,6 +363,7 @@ const planOverviewStatus = document.getElementById("planOverviewStatus");
 const planOverviewText = document.getElementById("planOverviewText");
 const planOverviewButton = document.getElementById("planOverviewButton");
 const planOverviewActionText = document.getElementById("planOverviewActionText");
+const planOverviewStepText = document.getElementById("planOverviewStepText");
 
   const mealPlan = document.getElementById("mealPlan");
   const mealPlanStatus = document.getElementById("mealPlanStatus");
@@ -411,5 +412,9 @@ if (planOverviewButton) {
 
 if (planOverviewActionText) {
   planOverviewActionText.textContent = "もう一度確認する場合は、家にある食材から見直せます。";
+}
+
+if (planOverviewStepText) {
+  planOverviewStepText.textContent = "確認済み：4ステップ";
 }
 }
