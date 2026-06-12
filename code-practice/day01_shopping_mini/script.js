@@ -73,7 +73,7 @@ function showPlan() {
         </ol>
       </div>
 
-      <button class="next-action" onclick="scrollToHomeFoods()">家にある食材へ進む</button>
+      <button id="planOverviewButton" class="next-action" onclick="scrollToHomeFoods()">家にある食材へ進む</button>
     </div>
 
     <div id="homeFoods" class="card home-card">
@@ -357,9 +357,10 @@ function markShoppingCheckDone() {
 }
 
 function markMealPlanDone() {
-  const planOverview = document.getElementById("planOverview");
-  const planOverviewStatus = document.getElementById("planOverviewStatus");
-  const planOverviewText = document.getElementById("planOverviewText");
+ const planOverview = document.getElementById("planOverview");
+const planOverviewStatus = document.getElementById("planOverviewStatus");
+const planOverviewText = document.getElementById("planOverviewText");
+const planOverviewButton = document.getElementById("planOverviewButton");
 
   const mealPlan = document.getElementById("mealPlan");
   const mealPlanStatus = document.getElementById("mealPlanStatus");
@@ -399,6 +400,10 @@ function markMealPlanDone() {
   }
 
   if (planOverviewText) {
-    planOverviewText.textContent = "4つの確認ステップが完了しました。買い物に進める状態です。";
-  }
+  planOverviewText.textContent = "4つの確認ステップが完了しました。買い物に進める状態です。";
+}
+
+if (planOverviewButton) {
+  planOverviewButton.textContent = "もう一度確認する";
+}
 }
