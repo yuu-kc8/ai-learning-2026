@@ -52,7 +52,7 @@ function showPlan() {
   result.innerHTML = `
     <div id="planOverview" class="card plan-overview">
       <h2>今回のプランまとめ <span id="planOverviewStatus" class="status-badge">プラン作成完了</span></h2>
-      <p>家にある食材・買い足し候補・3日分の献立をまとめて確認できます。</p>
+      <p>家にある食材・買い足しメモ・最終チェック・3日分の献立を順番に確認できます。</p>
 
       <p id="planOverviewText" class="overview-status">このプランは入力された食材をもとに作成されています。</p>
 
