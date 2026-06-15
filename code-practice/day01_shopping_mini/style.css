@@ -408,20 +408,6 @@ button:hover {
   font-weight: bold;
   margin-bottom: 4px;
 }
-.done-button {
-  color: #ffffff;
-  background-color: #15803d !important;
-}
-.done-button.checked,
-.done-button.checked:hover,
-.done-button:disabled,
-.done-button:disabled:hover {
-  color: #15803d !important;
-  background-color: #dcfce7 !important;
-  border: 1px solid #86efac !important;
-  opacity: 1;
-  cursor: not-allowed;
-}
 .checked-card {
   background-color: #f0fdf4 !important;
   border: 1px solid #86efac !important;
