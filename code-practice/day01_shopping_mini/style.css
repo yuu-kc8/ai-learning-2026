@@ -154,6 +154,10 @@ button:hover {
   border: 1px solid #e5e7eb;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
 }
+.extra-food-card {
+  border-left: 4px solid #7fb069;
+  background-color: #f6fbf4;
+}
 .home-card {
   background-color: #f0fdf4;
   border-color: #bbf7d0;
