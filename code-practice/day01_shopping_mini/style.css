@@ -67,7 +67,6 @@ box-sizing: border-box;
   margin-bottom: 8px;
   line-height: 1.6;
 }
-.error-message,
 .error-card {
   background-color: #ffecec;
   border-left: 6px solid #e06666;
