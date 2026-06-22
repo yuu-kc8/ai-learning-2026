@@ -143,11 +143,6 @@ button:hover {
   border-color: #bbf7d0;
   border-left: 5px solid #22c55e;
 }
-.home-food-list {
-  margin-top: 8px;
-  margin-bottom: 0;
-  padding-left: 22px;
-}
 .input-note {
   font-size: 14px;
   color: #555;
