@@ -428,6 +428,7 @@ button:hover {
   color: #15803d;
   font-weight: bold;
 }
+/* 確認済みリスト */
 .checked-list {
   margin-top: 12px;
   margin-bottom: 0;
