@@ -455,11 +455,26 @@ button:hover {
   overflow-wrap: break-word;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   counter-increment: checked-step;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .checked-list li::before {
-  content: counter(checked-step) ". ";
+  content: counter(checked-step);
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  color: #166534;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
   font-weight: 700;
+  line-height: 1;
+  margin-top: 1px;
 }
 @media (max-width: 480px) {
   .checked-list li {
