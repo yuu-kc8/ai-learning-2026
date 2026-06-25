@@ -482,5 +482,13 @@ button:hover {
     font-size: 13px;
     line-height: 1.5;
     border-left-width: 4px;
+    gap: 7px;
+  }
+
+  .checked-list li::before {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+    font-size: 11px;
   }
 }
