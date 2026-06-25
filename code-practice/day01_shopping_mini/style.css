@@ -437,6 +437,7 @@ button:hover {
   list-style: none;
   display: grid;
   gap: 8px;
+  counter-reset: checked-step;
 }
 
 .checked-list li {
@@ -453,6 +454,12 @@ button:hover {
   font-weight: 600;
   overflow-wrap: break-word;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  counter-increment: checked-step;
+}
+
+.checked-list li::before {
+  content: counter(checked-step) ". ";
+  font-weight: 700;
 }
 @media (max-width: 480px) {
   .checked-list li {
