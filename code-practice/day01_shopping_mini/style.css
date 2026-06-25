@@ -437,8 +437,10 @@ button:hover {
 .checked-list li {
   background-color: #f0fdf4;
   border: 1px solid #bbf7d0;
+  border-left: 5px solid #22c55e;
   border-radius: 10px;
   padding: 10px 12px;
   margin-bottom: 8px;
   font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
