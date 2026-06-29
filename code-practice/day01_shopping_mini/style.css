@@ -657,3 +657,8 @@ button {
   border-left: 6px solid #81c784;
   background-color: #fbfffb;
 }
+/* メモカードを見やすくする */
+.info-card {
+  border-left: 6px solid #90caf9;
+  background-color: #f5fbff;
+}
