@@ -632,3 +632,12 @@ button {
     border-radius: 0;
   }
 }
+/* 文字全体を読みやすくする */
+body {
+  line-height: 1.7;
+  color: #333333;
+}
+
+p {
+  line-height: 1.7;
+}
