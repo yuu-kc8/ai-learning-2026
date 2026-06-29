@@ -701,3 +701,11 @@ button + button {
     margin-bottom: 8px;
   }
 }
+/* カード内の見出しを少し整える */
+.day-card h3,
+.shopping-card h3,
+.info-card h3,
+.extra-food-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
