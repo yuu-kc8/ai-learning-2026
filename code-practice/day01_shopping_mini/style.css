@@ -597,3 +597,9 @@ h3 {
   padding-left: 8px;
   border-left: 4px solid #4caf50;
 }
+/* 画面全体の横幅を整える */
+body {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
