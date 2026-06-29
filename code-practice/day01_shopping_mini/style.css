@@ -580,3 +580,12 @@ li {
   margin-bottom: 8px;
   line-height: 1.6;
 }
+/* 入力欄を使いやすくする */
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+}
