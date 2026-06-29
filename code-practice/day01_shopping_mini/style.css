@@ -641,3 +641,9 @@ body {
 p {
   line-height: 1.7;
 }
+/* ボタンの色をアプリっぽくする */
+button {
+  background-color: #4caf50;
+  color: #ffffff;
+  font-weight: bold;
+}
