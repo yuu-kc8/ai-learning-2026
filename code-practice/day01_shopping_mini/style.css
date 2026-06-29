@@ -709,3 +709,11 @@ button + button {
   margin-top: 0;
   font-size: 18px;
 }
+/* カードの角を少し丸くする */
+.day-card,
+.shopping-card,
+.info-card,
+.extra-food-card,
+.error-card {
+  border-radius: 12px;
+}
