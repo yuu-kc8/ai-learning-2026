@@ -493,3 +493,17 @@ button:hover {
     font-size: 11px;
   }
 }
+/* 確認済みになった項目を見やすくする */
+.checked,
+.is-checked,
+.done {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.checked button,
+.is-checked button,
+.done button {
+  opacity: 1;
+  text-decoration: none;
+}
