@@ -625,3 +625,10 @@ button {
   border-radius: 8px;
   border: none;
 }
+/* スマホの余白をもう一度整える */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+    border-radius: 0;
+  }
+}
