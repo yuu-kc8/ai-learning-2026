@@ -618,3 +618,10 @@ body {
   padding: 24px;
   border-radius: 16px;
 }
+/* ボタンを押しやすくする */
+button {
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
