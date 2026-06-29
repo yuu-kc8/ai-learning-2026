@@ -674,3 +674,11 @@ button {
   background-color: #9e9e9e;
   color: #ffffff;
 }
+/* カード同士の間隔を整える */
+.day-card,
+.shopping-card,
+.info-card,
+.extra-food-card,
+.error-card {
+  margin-bottom: 16px;
+}
