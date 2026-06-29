@@ -571,3 +571,12 @@ textarea:focus {
     padding: 12px;
   }
 }
+/* リストを読みやすくする */
+ul {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
