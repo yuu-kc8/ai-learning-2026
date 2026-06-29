@@ -647,3 +647,8 @@ button {
   color: #ffffff;
   font-weight: bold;
 }
+/* 買い物リストを少し目立たせる */
+.shopping-card {
+  border-left: 6px solid #4caf50;
+  background-color: #f7fff7;
+}
