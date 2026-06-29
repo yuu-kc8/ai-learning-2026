@@ -682,3 +682,8 @@ button {
 .error-card {
   margin-bottom: 16px;
 }
+/* 入力欄まわりの間隔を整える */
+input,
+textarea {
+  margin-bottom: 12px;
+}
