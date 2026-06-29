@@ -527,3 +527,9 @@ button:hover {
 button:active {
   transform: scale(0.97);
 }
+/* 入力欄を選んだ時にわかりやすくする */
+input:focus,
+textarea:focus {
+  outline: 2px solid #4caf50;
+  background-color: #f6fff6;
+}
