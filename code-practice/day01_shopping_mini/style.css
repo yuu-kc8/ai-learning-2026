@@ -667,3 +667,10 @@ button {
   border-left: 6px solid #ffb74d;
   background-color: #fffaf2;
 }
+/* 確認済みボタンをわかりやすくする */
+.checked button,
+.is-checked button,
+.done button {
+  background-color: #9e9e9e;
+  color: #ffffff;
+}
