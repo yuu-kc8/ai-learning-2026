@@ -733,3 +733,11 @@ button + button {
 .error-card {
   padding: 16px;
 }
+/* カード内のリストの余白を整える */
+.day-card ul,
+.shopping-card ul,
+.info-card ul,
+.extra-food-card ul {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
