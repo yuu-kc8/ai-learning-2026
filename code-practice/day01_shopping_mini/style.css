@@ -687,3 +687,7 @@ input,
 textarea {
   margin-bottom: 12px;
 }
+/* ボタン同士の間隔を整える */
+button + button {
+  margin-left: 8px;
+}
