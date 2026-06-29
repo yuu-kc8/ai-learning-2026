@@ -717,3 +717,11 @@ button + button {
 .error-card {
   border-radius: 12px;
 }
+/* カードに少し影をつける */
+.day-card,
+.shopping-card,
+.info-card,
+.extra-food-card,
+.error-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
