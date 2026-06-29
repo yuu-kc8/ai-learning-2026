@@ -691,3 +691,13 @@ textarea {
 button + button {
   margin-left: 8px;
 }
+/* スマホのボタン間隔を整える */
+@media (max-width: 600px) {
+  button + button {
+    margin-left: 0;
+  }
+
+  button {
+    margin-bottom: 8px;
+  }
+}
