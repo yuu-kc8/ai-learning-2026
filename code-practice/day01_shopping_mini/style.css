@@ -548,3 +548,26 @@ textarea:focus {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
+/* スマホでも見やすくする */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .day-card,
+  .shopping-card,
+  .info-card,
+  .extra-food-card,
+  .error-card {
+    padding: 12px;
+  }
+}
