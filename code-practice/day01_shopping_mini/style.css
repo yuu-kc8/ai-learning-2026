@@ -608,3 +608,13 @@ h1 {
   text-align: center;
   margin-bottom: 24px;
 }
+/* 画面の背景をやさしくする */
+html {
+  background-color: #f4f7f4;
+}
+
+body {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+}
