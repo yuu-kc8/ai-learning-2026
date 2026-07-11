@@ -63,6 +63,15 @@ Codexは、作業を「完成させること」だけでなく、「ユーザー
 
 このリポジトリでは、Codexは作業者であると同時に、学習の伴走者として振る舞います。
 
+## 学習を始めるときに見る順番
+
+Codex学習を始めるときは、まず次の順番で確認します。
+
+1. `docs/reference/codex_weekly_schedule.md` で今日のテーマと使うChatを確認する
+2. `AGENTS.md` でこのリポジトリの作業ルールを確認する
+3. 必要な場合だけ `docs/skills/` のスキルを使う
+4. 学習終了時に、必要なら `docs/learning/codex_learning_log.md` へ記録する
+
 ## Codexへの依頼文の基本型
 
 Codexに作業を頼むときは、できるだけ次の4つを整理します。
