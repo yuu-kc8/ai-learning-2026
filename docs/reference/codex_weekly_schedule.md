@@ -1,5 +1,9 @@
 # Codex学習 一週間時間割
 
+## 目的
+
+Codex学習の曜日ごとのテーマ、主に使うChat、午前1〜2時間版、忙しい日の15分版を、いつでも確認できるようにまとめる。
+
 ## 基本方針
 
 - 1日2時間を目安にする
@@ -7,6 +11,18 @@
 - 目的・入力・出力形式・制約を毎回整理する
 - いきなりファイル変更しない
 - Codexの出力は、変更ファイル・理由・確認方法を見てから進める
+- 学習ログは、学習終了時に必要な内容を一括でまとめる
+
+## 使用する4つのChat
+
+1. Codex基礎ドリルChat
+2. 02_Codex作業レビューChat
+3. AIエージェント即戦ゼミ復習Chat
+4. Codexスキル練習Chat
+
+## 必要時に使うChat
+
+- Codexセキュリティ判断Chat：危ない作業・自動化・ログイン操作の判断
 
 ## Chatの使い分け
 
@@ -16,7 +32,7 @@
 | 02_Codex作業レビューChat | Codexの出力確認 |
 | AIエージェント即戦ゼミ復習Chat | 考え方の復習 |
 | Codexスキル練習Chat | 自分用スキルの練習 |
-| Codexセキュリティ判断Chat | 危ない作業の判断 |
+| Codexセキュリティ判断Chat | 危ない作業・自動化・ログイン操作の判断 |
 
 ## 一週間の流れ
 
@@ -45,8 +61,32 @@
 3. 結果を読む
 4. 今日わかったことを1行メモする
 
+## 学習中の合図
+
+| 合図 | 意味 |
+|---|---|
+| 今日やること | その日の小さい課題を決める |
+| おｋ | 内容を確認して、次へ進めてよい |
+| ok | 内容を確認して、次へ進めてよい |
+| 今日はここまで | 作業を終えて、必要なら学習ログにまとめる |
+
 ## 学習ログの記入先
 
 ```text
 docs/learning/codex_learning_log.md
+```
+
+## 作成後の確認方法
+
+```bash
+sed -n '1,220p' docs/reference/codex_weekly_schedule.md
+rg -n '^```' docs/reference/codex_weekly_schedule.md
+tail -n 8 docs/reference/codex_weekly_schedule.md
+git status --short --untracked-files=all
+```
+
+## Commit Message
+
+```text
+docs: update Codex weekly learning schedule
 ```
