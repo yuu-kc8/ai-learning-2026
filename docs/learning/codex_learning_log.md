@@ -391,3 +391,19 @@ docs/reference/codex_weekly_schedule.md
 ```text
 docs/reference/codex_weekly_schedule.md
 ```
+## 2026-07-13 Codex実践学習
+
+### 今日の目的
+`docs/reference/codex_weekly_schedule.md` の状態を確認し、Commitが必要か判断する。
+
+### やったこと
+- cにGit状態とMarkdownコードブロックの確認を依頼した
+- `git status --short` で変更がないことを確認した
+- Markdownコードブロックが閉じていることを確認した
+- 変更がないため、`git add`・Commit・push はしなかった
+
+### 学び
+変更がないときは、無理にCommitしない。確認だけで完了としてよい。
+
+### 次回
+`code-practice/day01_shopping_mini/README.md` を読んで、買い物ミニアプリの目的・使い方・確認方法を整理する。
